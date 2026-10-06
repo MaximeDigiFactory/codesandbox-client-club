@@ -1,0 +1,91 @@
+{
+  "apiVersion": 1,
+  "groups": [
+    {
+      "orgId": 1,
+      "name": "artefacts-dns",
+      "folder": "Monitoring",
+      "interval": "30s",
+      "rules": [
+        {
+          "uid": "artefacts-dns-job",
+          "title": "Certificat artefacts : job DNS-01 en échec ou sans exécution depuis 30 h",
+          "condition": "C",
+          "data": [
+            {
+              "refId": "A",
+              "relativeTimeRange": {
+                "from": 900,
+                "to": 0
+              },
+              "datasourceUid": "monitoring-prometheus",
+              "model": {
+                "refId": "A",
+                "expr": "(max by(host) (monitoring_artefacts_dns_job_failed{host=\"hermione\"}) + (time() - max by(host) (monitoring_artefacts_dns_job_last_attempt_timestamp_seconds{host=\"hermione\"}) > bool 108000)) or on(host) (max by(host) (up{job=\"host_inventory\",host=\"hermione\"}) * 0 + 1)",
+                "instant": true,
+                "range": false,
+                "intervalMs": 30000,
+                "maxDataPoints": 43200,
+                "datasource": {
+                  "type": "prometheus",
+                  "uid": "monitoring-prometheus"
+                }
+              }
+            },
+            {
+              "refId": "C",
+              "relativeTimeRange": {
+                "from": 0,
+                "to": 0
+              },
+              "datasourceUid": "__expr__",
+              "model": {
+                "refId": "C",
+                "type": "threshold",
+                "expression": "A",
+                "datasource": {
+                  "type": "__expr__",
+                  "uid": "__expr__"
+                },
+                "conditions": [
+                  {
+                    "evaluator": {
+                      "type": "gt",
+                      "params": [
+                        180
+                      ]
+                    },
+                    "operator": {
+                      "type": "and"
+                    },
+                    "query": {
+                      "params": [
+                        "C"
+                      ]
+                    },
+                    "reducer": {
+                      "type": "last",
+                      "params": []
+                    },
+                    "type": "query"
+                  }
+                ]
+              }
+            }
+          ],
+          "noDataState": "Alerting",
+          "execErrState": "Alerting",
+          "for": "1m",
+          "annotations": {
+            "summary": "Vérifier artefacts-dns.service sur Hermione ; ne pas publier les logs ACME ni de secret."
+          },
+          "labels": {
+            "service": "monitoring",
+            "severity": "warning"
+          },
+          "isPaused": false
+        }
+      ]
+    }
+  ]
+}
