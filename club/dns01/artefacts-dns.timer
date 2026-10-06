@@ -1,0 +1,12 @@
+[Unit]
+Description=Renouvellement automatique du seul certificat artefacts Club
+
+[Timer]
+OnBootSec=3min
+OnCalendar=*-*-* 03:17:00
+RandomizedDelaySec=15min
+Persistent=true
+Unit=artefacts-dns.service
+
+[Install]
+WantedBy=timers.target
