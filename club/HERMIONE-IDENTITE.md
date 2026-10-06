@@ -1,22 +1,22 @@
 # Identité Infisical Hermione — remise sécurisée
 
-État au 6 octobre 2026 : identité et ACL créées ; émission de clé et dossier de remise proposés, en attente de validation explicite. **Ne pas lancer cette commande avant confirmation de préparation de la clé.**
+État au 6 octobre 2026 : identité, ACL, clé client sans expiration et secret de remise **créés et qualifiés après autorisation explicite de Maxime**. Tous les refus de lecture/écriture sont confirmés HTTP 403, y compris le dossier de remise. La commande ci-dessous est prête à être exécutée sur Hermione pour installer le seul fichier root de credentials. Aucun fichier de credentials installé sur Hermione depuis Pépinière : son port SSH 22 refuse la connexion et le candidat 3594 expire ; aucun accès entrant SSH utilisable n'est disponible ici.
 
-Identité `hermione-artefacts-dns01`, UUID `2ced3438-30a3-43f2-9a53-4a18f6ca59ab`. Organisation et projet : `no-access`. Seul privilège : `secrets`, actions `describeSecret` et `readValue`, avec égalités exactes `environment=prod`, `secretPath=/dns-hermione`, `secretName=ALWAYSDATA_API_TOKEN`. Aucun rôle viewer/member/admin, aucun droit de modification ni de gestion des identités. Jetons d'accès limités à 300 secondes. La clé client permanente est proposée pour permettre les renouvellements sans intervention humaine ; elle sera révocable côté Infisical.
+Identité `hermione-artefacts-dns01`, UUID `2ced3438-30a3-43f2-9a53-4a18f6ca59ab`. Organisation et projet : `no-access`. Seul privilège : `secrets`, actions `describeSecret` et `readValue`, avec égalités exactes `environment=prod`, `secretPath=/dns-hermione`, `secretName=ALWAYSDATA_API_TOKEN`. Aucun rôle viewer/member/admin, aucun droit de modification ni de gestion des identités. Jetons d'accès limités à 300 secondes. La clé client permanente, autorisée et émise, permet les renouvellements sans intervention humaine ; elle est révocable côté Infisical.
 
 Adresse : `https://infisical.digiconseil.fr`, connexion directe à `192.168.1.25:443` avec ce nom conservé pour SNI et vérification du certificat. Réponse `/api/status` HTTP 200 sur le LAN, TLS vérifié depuis Pépinière. Aucun `/etc/hosts` ni proxy modifié. La commande ci-dessous vérifiera réellement cet accès depuis Hermione.
 
 ## Une commande sur Hermione
 
-Exécuter depuis le compte habituel de Maxime, disposant de sudo sur Hermione et de son accès SSH à `maxime@192.168.1.25`. Les éventuelles saisies des mots de passe sudo et SSH sont masquées par leurs outils ; aucune saisie/copie manuelle d'un secret Infisical et aucune interface Infisical nécessaire. L'accès SSH réutilise une clé existante ou demande le mot de passe ; aucun identifiant global Infisical ne quitte Pépinière.
+Exécuter depuis le compte habituel de Maxime, disposant de sudo sur Hermione et de son accès SSH à `maxime@192.168.1.25` sur le port **3594**. Les éventuelles saisies des mots de passe sudo et SSH sont masquées par leurs outils ; aucune saisie/copie manuelle d'un secret Infisical et aucune interface Infisical nécessaire. L'accès SSH réutilise une clé existante ou demande le mot de passe ; aucun identifiant global Infisical ne quitte Pépinière.
 
-La clé SSH de Pépinière est épinglée dans `KnownHostsCommand` : aucun fichier `known_hosts` nouveau. Le code de l'installateur est contrôlé par SHA-256 avant exécution root. Source à relire : `club/dns01/install-hermione-identity.py`. Ce bootstrap ne crée aucune unité, n'effectue aucun déploiement et ne modifie aucun fichier gateway, DNS ou pare-feu.
+La clé SSH de Pépinière est épinglée dans `KnownHostsCommand` : aucun fichier `known_hosts` nouveau. Connexion et clé SSH épinglée du port 3594 vérifiées en lecture seule sur Pépinière ; authentification utilisateur nécessaire. Le code de l'installateur est contrôlé par SHA-256 avant exécution root. Source à relire : `club/dns01/install-hermione-identity.py`. Ce bootstrap ne crée aucune unité, n'effectue aucun déploiement et ne modifie aucun fichier gateway, DNS ou pare-feu.
 
 ```bash
-sudo -v && ssh -T -F /dev/null \
+sudo -v && ssh -T -F /dev/null -p 3594 \
   -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null \
   -o StrictHostKeyChecking=yes -o HostKeyAlgorithms=ssh-ed25519 \
-  -o 'KnownHostsCommand=/bin/echo 192.168.1.25 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII4lqioIbKRKpsx7YgqipTpztACDrIFQwF9548/GW5aQ' \
+  -o 'KnownHostsCommand=/bin/echo [192.168.1.25]:3594 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII4lqioIbKRKpsx7YgqipTpztACDrIFQwF9548/GW5aQ' \
   maxime@192.168.1.25 \
   '/usr/bin/python3 -B /srv/projects/librechat-artefacts/club/dns01/handoff-hermione.py' \
   | sudo -n /usr/bin/python3 -B -c '
@@ -34,7 +34,7 @@ exec(compile(data["installer"],"hermione-identity-installer","exec"),{"__name__"
 
 Le seul fichier de credentials créé est `/etc/artefacts-dns/infisical-identity.env`, root:root 0600, répertoire protégé. Les valeurs passent uniquement en mémoire et dans le flux SSH chiffré, jamais en argument de processus, environnement de la commande SSH, terminal, historique ou fichier temporaire. Le token Alwaysdata reste dans Infisical. Un fichier existant différent, un lien symbolique ou des permissions incorrectes provoquent un refus sans écrasement. Une erreur de vérification après création retire seulement le fichier nouvellement créé. SSH indisponible ou authentification refusée : arrêt avant installation.
 
-Le dossier Infisical de remise proposé est `librechat-artefacts / prod / /hermione-bootstrap`, clé `HERMIONE_UNIVERSAL_AUTH` (JSON clientId/clientSecret). Il est inaccessible à l'identité Hermione. Le helper de Pépinière refuse toute exécution hors du tube SSH provenant d'Hermione `192.168.1.50`. Ne jamais exécuter/exporter ce helper directement ni envoyer sa sortie dans un terminal ou un fichier.
+Le dossier Infisical de remise autorisé et provisionné est `librechat-artefacts / prod / /hermione-bootstrap`, clé `HERMIONE_UNIVERSAL_AUTH` (JSON clientId/clientSecret). Il est inaccessible à l'identité Hermione. Ce dossier et cette clé sont effectivement refusés HTTP 403 à Hermione. Le helper de Pépinière refuse toute exécution hors du tube SSH provenant d'Hermione `192.168.1.50`. Ne jamais exécuter/exporter ce helper directement ni envoyer sa sortie dans un terminal ou un fichier.
 
 L'installateur vérifie la connexion, l'identité attendue, la présence et longueur du token et les refus d'accès à une autre clé, au dossier racine et au dossier de remise. Il refait ces contrôles après installation. Il ne teste pas l'API Alwaysdata et ne lance pas ACME. Sortie attendue : fichier root:root 0600 installé ; token présent, longueur 32 ; lectures hors périmètre refusées ; HTTPS LAN et TLS vérifiés.
 
