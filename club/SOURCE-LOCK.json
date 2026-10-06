@@ -35,5 +35,9 @@
     "tarball": "https://registry.npmjs.org/static-browser-server/-/static-browser-server-1.0.3.tgz",
     "integrity": "sha512-ZUyfgGDdFRbZGGJQ1YhiM930Yczz5VlbJObrQLlk24+qNHVQx4OlLcYswEUo3bIyNAbQUIUR9Yr5/Hqjzqb4zA==",
     "gitHead": "8b49725a29917d79d072dc641b4b83ada8dc0cd1"
+  },
+  "runtimePatchedAssetsSHA256": {
+    "index.html": "db37571e4f5cc88712a2b36c06e88f4b60f4d48cbdd0b889d0b90cd813a65a59",
+    "static/js/sandbox.5f40c6a02.js": "50dd0cb519f3144ccad9dc98dd400ce7216bcfa5222d7caf168a57d25842dddc"
   }
 }

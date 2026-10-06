@@ -1,7 +1,7 @@
 const{chromium,firefox,webkit}=require('/browser/node_modules/playwright');const fs=require('fs');let raw='';process.stdin.on('data',d=>raw+=d);process.stdin.on('end',async()=>{
  const a=JSON.parse(raw),all=[];
  for(const [engine,launcher]of Object.entries({chromium,firefox,webkit})){
-  const row={engine,scope:'Actual dc10 production UI, local TLS test relay; domain blocking simulation, not a browser extension',requests:[],errors:[],files:[]};let b;
+  const row={engine,scope:a.public?'Actual dc10 production UI and public TLS/configuration; domain blocking simulation':'Actual dc10 production UI, local TLS test relay; domain blocking simulation, not a browser extension',requests:[],errors:[],files:[]};let b;
   try{
    b=await launcher.launch({headless:true,timeout:15000,args:engine==='chromium'&&!a.public?['--ignore-certificate-errors']:[]});const c=await b.newContext({ignoreHTTPSErrors:!a.public,acceptDownloads:true});c.setDefaultTimeout(6000);if(engine==='chromium'&&!a.public){try{await c.grantPermissions(['local-network-access'],{origin:'https://librechat.digiconseil.fr'})}catch(e){row.errors.push('Test fixture permission: '+e.message.slice(0,120))}}
    await c.route('**/api/auth/refresh',r=>r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({token:a.token,user:a.user})}));
@@ -19,7 +19,7 @@ const{chromium,firefox,webkit}=require('/browser/node_modules/playwright');const
    }
    row.codeSandboxRequests=row.requests.filter(x=>/(?:codesandbox\.io|csbops\.io)$/.test(x.host));console.log(engine,'external CodeSandbox requests',row.codeSandboxRequests.length);await c.close()
   }catch(e){row.failure=e.message.slice(0,400);console.log(engine,'failure',row.failure)}finally{if(b)await b.close()}
-  all.push(row);fs.writeFileSync('/evidence/BROWSER-PREVIEW-LOCAL.json',JSON.stringify(all,null,2));
+  all.push(row);fs.writeFileSync(a.public?'/evidence/BROWSER-PREVIEW-PUBLIC.json':'/evidence/BROWSER-PREVIEW-LOCAL.json',JSON.stringify(all,null,2));
  }
  console.log('Saved sanitized network capture without tokens or headers');
 });
