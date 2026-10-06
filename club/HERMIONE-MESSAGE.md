@@ -1,21 +1,70 @@
-Bonjour,
+Bonjour Hermione,
 
-Publier les aperçus LibreChat Club auto-hébergés, sans modifier les autres domaines, SVE, le pare-feu, les services d'authentification ni le Docker global.
+Maxime autorise la publication des aperçus LibreChat Club sur `artefacts.digiconseil.fr` et `*.artefacts.digiconseil.fr`, avec certificat SAN renouvelé automatiquement par DNS-01 Alwaysdata. Fais l'intervention sur Hermione uniquement, via ses procédures habituelles de déploiement. Aucun changement SVE, pare-feu, Docker global, autre domaine ou méthode ACME des certificats existants. Ne jamais afficher token, identifiants Infisical, clés privées, environnement complet ou logs ACME détaillés.
 
-Sur Pépinière, le service statique `librechat-artefacts` est déjà démarré, sur son seul réseau `librechat-artefacts-net` (internal), sans port publié. Le nginx-proxy existant le sert avec les Host `artefacts.digiconseil.fr` et `*.artefacts.digiconseil.fr`. Contrôle local : HTTPS vers `192.168.1.25:443`, SNI `agence.digiconseil.fr`, Host conservé, certificat amont vérifié, répond 200. Cette séparation SNI/Host est la même que pour monitoring et librechat-preprod. Le certificat SNI agence est temporaire : surveiller son renouvellement, ne pas désactiver sa vérification.
+**Préalable DNS à décider par Maxime.** Le 6 octobre 2026, `d.nic.fr` délègue encore le domaine aux deux Alwaysdata ET `ns1/ns2.sendinblue.com`. Ces derniers répondent REFUSED pour SOA, NS, A existant, TXT et CAA, en UDP/TCP. La zone Alwaysdata ne déclare que ses deux serveurs. Demander à Maxime sa décision de retirer les deux Sendinblue dans les **serveurs DNS du domaine chez OVH** ; n'effectue pas toi-même cette modification. Avant émission de production, revérifier la délégation parent et sa convergence vers Alwaysdata. La seule attente de propagation du TXT ne corrige pas cette délégation.
 
-DNS Alwaysdata à conserver/créer si absent (TTL 300) :
+**Secret déjà prévu dans Infisical :** projet `librechat-artefacts`, UUID `73962094-cbd8-464f-91d6-bea7ba041d8c`, environnement `prod`, chemin `/dns-hermione`, clé `ALWAYSDATA_API_TOKEN`. Le dossier existe ; Maxime dispose de la commande masquée pour y déposer la valeur. Le profil Alwaysdata `dns@digiconseil.fr` a 2FA et accès au seul service Domaines du seul compte `lightprod.net`. Son token accepte uniquement l'IP source `82.124.220.142`. Aucun accès API Alwaysdata depuis Pépinière. Ne copier aucun identifiant global de Pépinière : utiliser l'authentification Infisical déjà disponible sur Hermione et provisionner par API, si nécessaire, une identité dédiée en lecture à ce dossier. Aucun passage de Maxime par l'interface Infisical. Les identifiants de cette identité restent dans un fichier privé 0600, propriétaire root, non versionné (ne pas changer les permissions du fichier global existant) ; le token Alwaysdata est relu directement du coffre à chaque exécution. L'API disponible est Universal Auth + v3 `secrets/raw`, pas v4.
 
-```dns
-artefacts.digiconseil.fr.   300 IN A 82.124.220.142
-*.artefacts.digiconseil.fr. 300 IN A 82.124.220.142
+**Solution retenue : job acme.sh dédié au seul certificat artefacts.** Il ne change pas le challenge HTTP-01 ou les renouvellements de l'acme-companion existant. Les scripts prêts sont dans le checkout local du fork ; **ne pas tenter de récupérer le commit privé/local depuis GitHub** :
+
+- dépôt : `https://github.com/MaximeDigiFactory/codesandbox-client-club.git` ;
+- commit local des scripts : `56a0b9f1f6b74e78aa4ec6e4e7b38fddf4f46493`, **non poussé sur GitHub** ;
+- dossier local `club/dns01/` : `infisical_dns.py`, `renew-hermione.py`, `artefacts-dns-reload`, unité et minuterie systemd ; code complet reproduit en annexe ci-dessous pour cette transmission privée ;
+- aucune image supplémentaire : le source acme.sh est figé au commit `807da6498377ee5e0cf43a78091f46f12dc59a89`.
+
+1. Sauvegarder les deux fichiers gateway et les seuls éventuels fichiers de certificat artefacts. Repérer le nom réel du conteneur nginx-proxy, son montage `/etc/nginx/certs` et le chemin hôte correspondant, sans afficher son environnement. Repérer le fichier de credentials Infisical de l'identité de lecture. Le dossier de certificats doit rester accessible en écriture au job, et en lecture au proxy, avec clé privée 0600. Aucun changement de propriétaire récursif sur les autres certificats.
+
+2. Installer les trois fichiers Python/reload à `/opt/artefacts-dns/` et le reload à `/usr/local/sbin/artefacts-dns-reload` (0750 root). Installer les sources ACME :
+
+```bash
+sudo install -d -m 0755 /opt/artefacts-dns/acme/dnsapi
+sudo curl -fsS https://raw.githubusercontent.com/acmesh-official/acme.sh/807da6498377ee5e0cf43a78091f46f12dc59a89/acme.sh -o /opt/artefacts-dns/acme/acme.sh
+sudo curl -fsS https://raw.githubusercontent.com/acmesh-official/acme.sh/807da6498377ee5e0cf43a78091f46f12dc59a89/dnsapi/dns_ad.sh -o /opt/artefacts-dns/acme/dnsapi/dns_ad.sh
 ```
 
-Les noms principal et de test `fixture-preview.artefacts.digiconseil.fr` répondent déjà correctement auprès de `dns1.alwaysdata.com` ; aucun changement DNS effectué sur Pépinière. Ne pas publier d'AAAA faute de routage public IPv6 validé.
+Le job vérifie systématiquement ces SHA-256 avant appel :
 
-**Point indispensable : certificat public SAN `artefacts.digiconseil.fr` ET `*.artefacts.digiconseil.fr`.** Sandpack static-browser-server 1.0.3 crée une origine aléatoire du type `<id>-preview.artefacts.digiconseil.fr` pour chaque aperçu. Le seul certificat du domaine principal ne suffit pas. Un certificat wildcard Let's Encrypt exige DNS-01 (challenge TXT `_acme-challenge.artefacts.digiconseil.fr`). Employer le mécanisme DNS-01/renouvellement existant sur Hermione avec Alwaysdata s'il existe ; sinon préparer ce mécanisme explicitement avant activation. Ne pas ajouter naïvement le wildcard à un `LETSENCRYPT_HOST` géré en HTTP-01, et ne pas toucher à l'acme-companion cassé de Pépinière. Aucun secret DNS/certificat/clé ne doit être affiché.
+```text
+acme.sh          c7d68b021cfd6380ea83a82962abde5b484779fee0b97d38681dfa1396bbc8d7
+dnsapi/dns_ad.sh  44aa59e1429cb58be59a9ce15441b88db92f83c8a11438fe1b21880c91d52313
+```
 
-Sur Hermione, `/home/digiconseil/projects/gateways/docker-compose.yml` et `/home/digiconseil/projects/gateways/pepiniere/nginx.conf` : sauvegarder les deux fichiers, ajouter seulement `artefacts.digiconseil.fr,*.artefacts.digiconseil.fr` à `VIRTUAL_HOST` de `pepiniere-gateway`, préserver toutes les entrées existantes ; installer le certificat wildcard par le mécanisme dédié DNS-01 et son renouvellement. Ajouter ce serveur au relais :
+Prévoir `python3-requests`, `bash`, `curl`, `openssl` sur Hermione. Ne pas lancer `acme.sh --install`, son cron générique ou son auto-upgrade : l'unité dédiée appelle directement le source figé.
+
+3. Créer `/etc/artefacts-dns/runtime.conf`, sans token, avec les trois paramètres **non sensibles**, adaptés aux chemins/noms réellement constatés :
+
+```ini
+ARTEFACTS_INFISICAL_CREDENTIALS=/chemin/reel/credentials-infisical-lecture
+ARTEFACTS_PROXY_CERTS_DIR=/chemin/reel/du/montage/certs
+ARTEFACTS_NGINX_PROXY_CONTAINER=nom-reel-du-proxy
+```
+
+Installer `artefacts-dns.service` et `.timer` dans `/etc/systemd/system/`. Compléter l'unité par `ReadWritePaths=` contenant **le chemin hôte réel du dossier certs** ; conserver ses protections, limites et `StateDirectory=artefacts-dns`. Ajouter l'alerte d'échec au mécanisme de monitoring existant sur Hermione, sans inventer de destinataire ni publier de logs sensibles. Aucune dépendance ajoutée à `docker.service`. La minuterie quotidienne avec `Persistent=true` reprend au redémarrage ; `OnBootSec=3min` lance aussi un contrôle après démarrage. Un échec conserve les services web en fonctionnement, signale le job en échec et permet la prochaine tentative automatique.
+
+**Sélecteur Alwaysdata vérifié.** Le fournisseur officiel `dns_ad` n'a que `AD_API_KEY`, pas `AD_ACCOUNT`/`AD_Account`. Alwaysdata exige comme utilisateur HTTP Basic : `TOKEN account=lightprod.net`, avec mot de passe vide. Le job construit en mémoire :
+
+```python
+AD_API_KEY = quote(token + " account=lightprod.net", safe="")
+```
+
+`dns_ad` place cet identifiant encodé dans son URL ; curl le décode avant de construire Basic. Test local avec faux token : identifiant reçu exactement `TOKEN account=lightprod.net:`. Aucun paramètre `account` ajouté à la query string. Ne pas utiliser l'email du profil comme compte cible. L'accès réel à `domain/` doit voir `digiconseil.fr` depuis Hermione et être refusé pour les ressources hors permission ; vérifier en lecture seule sans publier la réponse. Le test synthétique ne prouve pas les droits réels du token.
+
+Le job désactive les sorties ACME, n'utilise ni debug ni trace HTTP, relit le token Infisical à chaque passage et supprime la copie `AD_API_KEY` que dns_ad tente d'enregistrer dans `account.conf`, avant et après chaque exécution. L'état ACME privé est dans `/var/lib/artefacts-dns` (0700), hors Git ; les clés ACME/certificat doivent y persister. Pas de token dans compose, commande shell tapée, fichier versionné ou journal. Sérialiser ce seul job, et ne pas faire gérer `_acme-challenge.artefacts.digiconseil.fr` par un second client ACME concurrent : dns_ad supprime le premier TXT de ce nom lors du nettoyage.
+
+4. Après token présent, délégation corrigée/contrôlée et identité de lecture prête, vérifier les unités puis lancer seulement ce job :
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl start artefacts-dns.service
+sudo systemctl enable --now artefacts-dns.timer
+```
+
+Première exécution : émission Let's Encrypt DNS-01, SAN principal + wildcard, clé ec-256, attente TXT 300 s, installation `artefacts.digiconseil.fr.key/.crt` dans le montage certs ; validation nginx et reload gracieux. Exécutions suivantes : `--renew` sans force, renouvellement seulement lorsque dû, réinstallation/reload pour récupérer aussi un éventuel échec d'installation précédent. Le code 2 de renouvellement différé est accepté. Vérifier une deuxième exécution sans ressaisie de secret et la prochaine échéance de la minuterie. Le cycle automatique est entièrement prévu par ces fichiers ; il doit être qualifié sur Hermione, et ne dépendra ensuite d'aucune action de Maxime. Conserver l'alerte de certificat expirant pour détecter une panne durable de DNS/Infisical/Alwaysdata.
+
+5. Publication : sur Pépinière, le statique `librechat-artefacts` fonctionne déjà sur le seul réseau `librechat-artefacts-net` internal, sans port publié. Sa version attendue est `PROD-1741371360-5877b84`. Les DNS A principal et wildcard répondent `82.124.220.142`, TTL 300 ; ne pas ajouter d'AAAA sans route IPv6 validée. Sur Hermione, dans `/home/digiconseil/projects/gateways/docker-compose.yml`, ajouter seulement `artefacts.digiconseil.fr,*.artefacts.digiconseil.fr` au `VIRTUAL_HOST` de `pepiniere-gateway`, préserver toutes les entrées et son `LETSENCRYPT_HOST` actuel. **Ne pas ajouter ces deux noms au challenge HTTP-01 existant, ni définir un CERT_NAME global sur la gateway multi-domaines.** Le nom de fichier parent `artefacts.digiconseil.fr.crt/.key` permet à nginx-proxy sa sélection native pour le principal et le wildcard ; vérifier sur la version effective de ton proxy.
+
+Dans `pepiniere/nginx.conf`, ajouter le serveur ci-dessous. Adapter seulement son `listen` au port interne existant, et conserver les règles actuelles de confiance X-Forwarded :
 
 ```nginx
 server {
@@ -39,11 +88,9 @@ server {
 }
 ```
 
-Adapter uniquement le `listen` au port interne actuel de pepiniere-gateway s'il diffère de 80 ; conserver le traitement de confiance de X-Forwarded de la gateway actuelle. Le frontal public doit préserver la CSP/CORS du serveur statique, ne pas ajouter X-Frame-Options DENY/SAMEORIGIN, et n'ajouter ni authentification Club ni cookie sur cette origine. Il doit rejeter les Host qui ne correspondent pas à ces domaines. Les fichiers de membres ne transitent pas par ce service statique : leur contenu est rendu localement dans le navigateur.
+L'amont répond déjà en TLS vérifié via SNI agence, Host artefacts conservé, à `192.168.1.25:443`. Surveiller aussi le renouvellement de ce certificat amont ; ne jamais désactiver `proxy_ssl_verify`. Préserver CSP/CORS, aucune authentification Club ni cookie, aucun X-Frame-Options DENY/SAMEORIGIN. Rejeter les Host étrangers. Aucun fichier membre envoyé au service statique : rendu navigateur. Valider puis recréer **uniquement pepiniere-gateway** via sa procédure habituelle. Reload nginx gracieux après certificat, aucun redémarrage Docker ou recréation du frontal/companion.
 
-Valider la syntaxe des configurations puis recréer **uniquement** `pepiniere-gateway` par le mécanisme de déploiement de cette pile. Aucun redémarrage de Docker ni recréation de nginx-proxy/acme-companion. Vérifier les domaines monitoring, librechat, librechat-preprod et deux autres sites après l'opération.
-
-Contrôles publics obligatoires, certificat et CA vérifiés sans `-k` :
+6. Contrôles sans `-k`, puis témoin d'une autre origine aléatoire :
 
 ```bash
 curl -fsS https://artefacts.digiconseil.fr/version.txt
@@ -51,6 +98,227 @@ curl -fsS https://fixture-preview.artefacts.digiconseil.fr/__csb_relay/
 curl -fsSI -H 'Origin: https://librechat.digiconseil.fr' https://fixture-preview.artefacts.digiconseil.fr/__csb_relay/
 ```
 
-Le premier doit afficher `PROD-1741371360-5877b84`. Le deuxième contient la page relais. Le troisième doit conserver CORS (origine exacte), CSP et absence de Set-Cookie. Confirmer aussi HTTPS avec une autre origine aléatoire et le renouvellement automatique DNS-01. Envoyer seulement les statuts et métadonnées de certificat, aucun secret.
+Confirmer TLS/chaîne/SAN, CORS exact prod et préprod, CSP conservée, absence de Set-Cookie, préflight CORS, un autre Host aléatoire ; monitoring, LibreChat, préproduction et deux autres domaines toujours fonctionnels. Retourner seulement métadonnées de certificat, statuts, échéance minuterie et résultat de deuxième exécution. Aucun secret ni environnement. Pépinière activera ensuite les variables natives avec sa porte HTTPS/empreintes d'assets et recettera Excel, Word, HTML dans les trois moteurs.
 
-Retour arrière : restaurer les deux seuls fichiers gateway sauvegardés, retirer seulement cette publication/certificat, recréer uniquement pepiniere-gateway, et recontrôler les domaines existants. Les deux LibreChat n'activent les nouvelles URL d'aperçu qu'après réussite des contrôles publics ci-dessus.
+**Retour arrière avant intervention :** sauvegarder les deux seuls fichiers gateway et les fichiers artefacts existants ; en cas d'échec restaurer seulement ceux-ci, recréer pepiniere-gateway, puis contrôler les autres domaines. Désactiver/arrêter uniquement `artefacts-dns.timer` et `.service`, retirer uniquement cette publication/certificat si nouveau. Garder le répertoire d'état privé pour rétablissement ; ne retirer aucune autre minuterie, certificat, règle réseau ou entrée DNS partagée. Le retrait du secret ou de son identité demande de vérifier qu'ils n'ont aucun autre consommateur. Le repli de l'aperçu LibreChat se fait sur Pépinière avant retrait de publication, selon `club/ROLLBACK.md`.
+
+Sources vérifiées : [Alwaysdata, compte dans HTTP Basic](https://help.alwaysdata.com/en/docs/development/api/usage/), [dns_ad figé](https://github.com/acmesh-official/acme.sh/blob/807da6498377ee5e0cf43a78091f46f12dc59a89/dnsapi/dns_ad.sh), [acme.sh renouvellement/installation](https://github.com/acmesh-official/acme.sh), [nginx-proxy certificats wildcard](https://github.com/nginx-proxy/nginx-proxy/blob/main/docs/README.md#wildcard-certificates).
+
+
+---
+
+Annexe — fichiers à installer sur Hermione. Le push GitHub des nouveaux détails d'infrastructure a été refusé par le contrôle automatique ; ils restent dans le checkout Pépinière et sont reproduits ici pour la seule transmission demandée à Hermione. Aucun token réel dans ces fichiers. Ne pas publier cette annexe dans un dépôt public. Les deux sources ACME sont téléchargées séparément depuis les URL figées ci-dessus.
+
+### /opt/artefacts-dns/infisical_dns.py
+
+```python
+"""Private in-memory Infisical client; no CLI exports or response logging."""
+import ctypes, os, resource, subprocess
+import requests
+PROJECT_ID = "73962094-cbd8-464f-91d6-bea7ba041d8c"
+PROJECT_NAME = "librechat-artefacts"
+ENVIRONMENT = "prod"
+SECRET_PATH = "/dns-hermione"
+SECRET_NAME = "ALWAYSDATA_API_TOKEN"
+
+class SafeError(Exception):
+    pass
+
+def private_process():
+    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
+    if ctypes.CDLL(None).prctl(4, 0, 0, 0, 0) != 0:
+        raise SafeError("Impossible de protéger le processus ; opération refusée.")
+
+def checked(response):
+    if not 200 <= response.status_code < 300:
+        raise SafeError("Infisical : échec HTTP %d ; contenu masqué." % response.status_code)
+    return response.json()
+
+class Client:
+    def __init__(self, credentials="/srv/projects/.env.infisical"):
+        # Read the existing trusted shell-format configuration through a private pipe.
+        # No credential appears in argv; no stdout/stderr from source is forwarded.
+        shell = ('set +x; source "$1" >/dev/null 2>&1 || exit 1; '
+                 'printf "%s\\0" "$INFISICAL_DOMAIN" "$INFISICAL_CLIENT_ID" '
+                 '"$INFISICAL_CLIENT_SECRET"')
+        r = subprocess.run(["bash", "--noprofile", "--norc", "-c", shell, "credentials", credentials],
+                           env={"PATH": "/usr/local/bin:/usr/bin:/bin"}, capture_output=True, check=True, timeout=10)
+        domain, client_id, client_secret, _ = r.stdout.decode().split("\0")
+        if not all((domain, client_id, client_secret)) or not domain.startswith("https://"):
+            raise SafeError("Configuration Infisical HTTPS incomplète ; opération refusée.")
+        self.base = domain.rstrip("/")
+        self.session = requests.Session()
+        self.session.trust_env = False
+        auth = checked(self.session.post(self.base + "/api/v1/auth/universal-auth/login",
+                   json={"clientId": client_id, "clientSecret": client_secret}, timeout=20,
+                   allow_redirects=False))
+        self.session.headers["Authorization"] = "Bearer " + auth["accessToken"]
+        self.params = {"workspaceId": PROJECT_ID, "environment": ENVIRONMENT,
+                       "secretPath": SECRET_PATH, "type": "shared"}
+        self.url = self.base + "/api/v3/secrets/raw/" + SECRET_NAME
+
+    def ensure_folder(self):
+        params = {"workspaceId": PROJECT_ID, "environment": ENVIRONMENT, "path": "/"}
+        folders = checked(self.session.get(self.base + "/api/v1/folders", params=params,
+                                           timeout=20, allow_redirects=False))["folders"]
+        if not any(f["name"] == "dns-hermione" for f in folders):
+            checked(self.session.post(self.base + "/api/v1/folders",
+                      json={**params, "name": "dns-hermione"}, timeout=20, allow_redirects=False))
+
+    def get(self, missing_ok=False):
+        r = self.session.get(self.url, params={**self.params, "expandSecretReferences": "false"},
+                             timeout=20, allow_redirects=False)
+        if missing_ok and r.status_code == 404:
+            return None
+        return checked(r)["secret"]["secretValue"]
+
+    def store(self, value):
+        old = self.get(missing_ok=True)
+        method = self.session.post if old is None else self.session.patch
+        checked(method(self.url, json={**self.params, "secretValue": value}, timeout=20,
+                       allow_redirects=False))
+        stored = self.get()
+        if stored != value:
+            raise SafeError("La relecture ne confirme pas la valeur ; contenu masqué.")
+        return len(stored)
+```
+
+### /opt/artefacts-dns/renew-hermione.py
+
+```python
+#!/usr/bin/env python3
+"""Hermione-only ACME job; never run this on Pepiniere."""
+import fcntl, hashlib, os, subprocess, sys
+from pathlib import Path
+from urllib.parse import quote
+sys.dont_write_bytecode = True
+from infisical_dns import Client, SafeError, private_process
+ACME_SOURCE_DIR = Path("/opt/artefacts-dns/acme")
+STATE = Path("/var/lib/artefacts-dns")
+DOMAIN = "artefacts.digiconseil.fr"
+LOCKS = {
+    "acme.sh": "c7d68b021cfd6380ea83a82962abde5b484779fee0b97d38681dfa1396bbc8d7",
+    "dnsapi/dns_ad.sh": "44aa59e1429cb58be59a9ce15441b88db92f83c8a11438fe1b21880c91d52313",
+}
+
+def purge_saved_key():
+    # dns_ad saves its credential; remove it before/after each run so rotation is
+    # picked up from Infisical and no old value overrides the fresh environment.
+    path = STATE / "account.conf"
+    if path.exists():
+        lines = path.read_text().splitlines(keepends=True)
+        path.write_text("".join(x for x in lines if not x.startswith(("AD_API_KEY=", "SAVED_AD_API_KEY="))))
+        path.chmod(0o600)
+
+def invoke(args, env, accept_skip=False):
+    cmd = ["/bin/sh", str(ACME_SOURCE_DIR / "acme.sh"), "--home", str(ACME_SOURCE_DIR), "--config-home", str(STATE),
+           "--server", "letsencrypt", "--no-color"] + args
+    r = subprocess.run(cmd, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                       timeout=900)
+    if r.returncode != 0 and not (accept_skip and r.returncode == 2):
+        raise SafeError("ACME a échoué ; sortie privée non publiée.")
+    return r.returncode
+
+def main():
+    private_process()
+    if os.environ.get("ARTEFACTS_DNS_EXECUTION_HOST") != "hermione":
+        raise SafeError("Exécution autorisée uniquement sur Hermione.")
+    os.umask(0o077)
+    for name, expected in LOCKS.items():
+        if hashlib.sha256((ACME_SOURCE_DIR / name).read_bytes()).hexdigest() != expected:
+            raise SafeError("Source ACME différente du commit figé.")
+    # State directory is prepared by StateDirectory= of the systemd unit.
+    with (STATE / "job.lock").open("w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        client = Client(os.environ["ARTEFACTS_INFISICAL_CREDENTIALS"])
+        value = client.get()
+        if not value or not value.isascii() or any(c.isspace() for c in value) or ":" in value:
+            raise SafeError("Secret absent ou format invalide.")
+        env = {"PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+               "HOME": os.environ.get("HOME", "/root"),
+               "ARTEFACTS_NGINX_PROXY_CONTAINER": os.environ["ARTEFACTS_NGINX_PROXY_CONTAINER"],
+               "AD_API_KEY": quote(value + " account=lightprod.net", safe="")}
+        purge_saved_key()
+        try:
+            installed = (STATE / (DOMAIN + "_ecc") / (DOMAIN + ".cer")).exists()
+            if installed:
+                invoke(["--renew", "-d", DOMAIN, "--ecc"], env, accept_skip=True)
+            else:
+                invoke(["--issue", "--dns", "dns_ad", "--dnssleep", "300", "-d", DOMAIN,
+                        "-d", "*." + DOMAIN, "--keylength", "ec-256", "--email", "dns@digiconseil.fr"], env)
+            # Also reinstalls/reloads on non-renewal days: idempotent recovery if
+            # issuance succeeded but installation/reload failed on a previous run.
+            certs = Path(os.environ["ARTEFACTS_PROXY_CERTS_DIR"])
+            invoke(["--install-cert", "-d", DOMAIN, "--ecc", "--key-file", str(certs / (DOMAIN + ".key")),
+                    "--fullchain-file", str(certs / (DOMAIN + ".crt")), "--reloadcmd",
+                    "/usr/local/sbin/artefacts-dns-reload"], env)
+        finally:
+            purge_saved_key()
+    print("Artefacts DNS-01: secret lu depuis Infisical; certificat installé; nginx rechargé.")
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception:
+        print("Artefacts DNS-01: échec; certificat actuel conservé; aucun secret affiché.", file=sys.stderr)
+        sys.exit(1)
+```
+
+### /usr/local/sbin/artefacts-dns-reload
+
+```sh
+#!/bin/sh
+set -eu
+# Container name is a non-secret setting inherited from the ACME job.
+: "${ARTEFACTS_NGINX_PROXY_CONTAINER:?Hermione must supply the existing proxy name}"
+/usr/bin/docker exec "$ARTEFACTS_NGINX_PROXY_CONTAINER" nginx -t >/dev/null 2>&1
+/usr/bin/docker exec "$ARTEFACTS_NGINX_PROXY_CONTAINER" nginx -s reload >/dev/null 2>&1
+```
+
+### /etc/systemd/system/artefacts-dns.service
+
+```ini
+[Unit]
+Description=Certificat artefacts Club DNS-01 Alwaysdata (Hermione uniquement)
+Wants=network-online.target
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+User=root
+UMask=0077
+Environment=ARTEFACTS_DNS_EXECUTION_HOST=hermione
+EnvironmentFile=/etc/artefacts-dns/runtime.conf
+ExecStart=/usr/bin/python3 -B /opt/artefacts-dns/renew-hermione.py
+StateDirectory=artefacts-dns
+StateDirectoryMode=0700
+TimeoutStartSec=35min
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+# Hermione must add the resolved proxy certificate directory as ReadWritePaths.
+ReadWritePaths=/var/lib/artefacts-dns
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=192M
+CPUQuota=50%
+TasksMax=64
+```
+
+### /etc/systemd/system/artefacts-dns.timer
+
+```ini
+[Unit]
+Description=Renouvellement automatique du seul certificat artefacts Club
+
+[Timer]
+OnBootSec=3min
+OnCalendar=*-*-* 03:17:00
+RandomizedDelaySec=15min
+Persistent=true
+Unit=artefacts-dns.service
+
+[Install]
+WantedBy=timers.target
+```

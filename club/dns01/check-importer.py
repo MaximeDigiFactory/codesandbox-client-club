@@ -42,6 +42,20 @@ with patch.object(api.subprocess, "run", return_value=subprocess.CompletedProces
     assert [x[0] for x in fake.calls if x[0] != "GET" and "/secrets/" in x[1]] == ["POST", "PATCH"]
     assert fake.trust_env is False
 
+# API error bodies must never be included in user-facing exception messages.
+for status in (302, 400, 401, 403, 500):
+    try:
+        api.checked(Response(status, {"secretValue": FIXTURE}))
+        raise AssertionError("Non-success response accepted")
+    except api.SafeError as error:
+        assert FIXTURE not in str(error)
+with patch.object(client, "get", side_effect=[None, "OTHER_SYNTHETIC_VALUE"]):
+    try:
+        client.store(FIXTURE)
+        raise AssertionError("Mismatching readback accepted")
+    except api.SafeError as error:
+        assert FIXTURE not in str(error) and "OTHER_SYNTHETIC_VALUE" not in str(error)
+
 # Real getpass on a controlling pseudo-terminal: the synthetic token must not echo.
 code = """
 import sys,runpy

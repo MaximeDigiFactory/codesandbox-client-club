@@ -20,3 +20,9 @@ Les capacités, rôles USER/ADMIN, secrets, fichiers existants et connecteurs ne
 5. **Hermione** : procédure dans `HERMIONE-MESSAGE.md`, restauration des deux fichiers gateway sauvegardés et retrait de cette seule publication/certificat. Aucun retrait du wildcard DNS général existant ni changement des autres domaines.
 
 Le garde nftables et les piles de calcul/C94 ne sont jamais modifiés par ce repli. L'ordre recommandé est URL LibreChat → publication Hermione → arrêt du statique → retrait du seul réseau de publication.
+
+## Révision DNS-01 Hermione
+
+La procédure transmise n'a été ni installée ni exécutée par cette session sur Hermione. Le dossier Infisical `librechat-artefacts / prod /dns-hermione` a été créé ; aucune valeur de token déposée par l'agent. Sur Hermione, arrêter/désactiver seulement `artefacts-dns.timer` et `artefacts-dns.service`, restaurer les deux seuls fichiers gateway et les certificats artefacts sauvegardés, puis vérifier les autres domaines. Aucun drop-in Docker. Préserver les états privés ACME jusqu'à décision de suppression. Le retrait éventuel du token et de son identité doit vérifier leurs seuls consommateurs.
+
+La proposition OVH retire seulement `ns1.sendinblue.com` et `ns2.sendinblue.com` de la délégation du domaine ; elle reste une décision de Maxime, et aucune modification DNS n'a été faite ici.
