@@ -1,0 +1,9 @@
+{
+  "path": "/srv/projects/librechat-artefacts/state/images-artefacts.tar",
+  "images": [
+    "librechat-club-artefacts@sha256:0d02712af98205df729801700e1419c6c20327263597c185036c2d02b82331ee",
+    "librechat-club-artefacts@sha256:767a2be0b49dd2347dcf478a6975345636f7cbda6931298e348f232a7c7b118d"
+  ],
+  "bytes": 50591232,
+  "SHA256": "ddc1abf3802f5a68972ac84dcc6edc7c4fcdd9ef53d67ac67f93e49fb9bf6a34"
+}

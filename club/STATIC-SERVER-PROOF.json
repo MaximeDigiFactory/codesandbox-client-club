@@ -1,0 +1,61 @@
+{
+  "image": "librechat-club-artefacts@sha256:0d02712af98205df729801700e1419c6c20327263597c185036c2d02b82331ee",
+  "status": "running",
+  "health": "healthy",
+  "user": "101:101",
+  "networks": [
+    "librechat-artefacts-net"
+  ],
+  "internal": true,
+  "ports": {},
+  "privileged": false,
+  "capDrop": [
+    "ALL"
+  ],
+  "memoryBytes": 268435456,
+  "nanoCPUs": 500000000,
+  "pids": 64,
+  "CORS": [
+    {
+      "origin": "https://librechat.digiconseil.fr",
+      "HTTP": 200,
+      "allowOrigin": "https://librechat.digiconseil.fr",
+      "CSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+      "setsCookie": false
+    },
+    {
+      "origin": "https://librechat-preprod.digiconseil.fr",
+      "HTTP": 200,
+      "allowOrigin": "https://librechat-preprod.digiconseil.fr",
+      "CSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+      "setsCookie": false
+    },
+    {
+      "origin": "https://untrusted.example",
+      "HTTP": 200,
+      "allowOrigin": null,
+      "CSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+      "setsCookie": false
+    }
+  ],
+  "vendorAssets": [
+    {
+      "filename": "tailwind.3.4.17.js",
+      "HTTP": 200,
+      "sameSHA256": true,
+      "contentType": "application/javascript"
+    },
+    {
+      "filename": "jszip.3.10.1.js",
+      "HTTP": 200,
+      "sameSHA256": true,
+      "contentType": "application/javascript"
+    },
+    {
+      "filename": "docx-preview.0.3.7.js",
+      "HTTP": 200,
+      "sameSHA256": true,
+      "contentType": "application/javascript"
+    }
+  ]
+}

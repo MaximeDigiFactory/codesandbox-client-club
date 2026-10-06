@@ -33,3 +33,11 @@ standalone-packages/monaco-editor-core
 .cache-loader
 
 packages/app/static/js/env-config.js
+# Club deployment/build evidence
+.env
+.env.infisical
+state/
+node_modules/
+
+__pycache__/
+*.pyc

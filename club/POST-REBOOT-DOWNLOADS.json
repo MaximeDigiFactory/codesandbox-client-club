@@ -1,0 +1,22 @@
+[
+  {
+    "filename": "bilan.html",
+    "HTTP": 200,
+    "sameSHA256": true
+  },
+  {
+    "filename": "bilan.pdf",
+    "HTTP": 200,
+    "sameSHA256": true
+  },
+  {
+    "filename": "bilan.docx",
+    "HTTP": 200,
+    "sameSHA256": true
+  },
+  {
+    "filename": "bilan.xlsx",
+    "HTTP": 200,
+    "sameSHA256": true
+  }
+]

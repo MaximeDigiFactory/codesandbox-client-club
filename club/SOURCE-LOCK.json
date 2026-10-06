@@ -1,0 +1,39 @@
+{
+  "upstreamCommit": "5877b8427e85b457dbb4f92209b1e8a2489cfa3b",
+  "release": "bundler-v12",
+  "archiveSHA256": "e6ce913b9066a46b9255e9cd517e6413134523eb2da861bd356e4e1999a654c6",
+  "staticBrowserServer": "1.0.3",
+  "sandpackClient": "2.19.8",
+  "telemetry": "persistMeasurements source + fixed emitted function changed to Promise.resolve(); IS_ONPREM=true",
+  "staticAssetsSHA256": {
+    "index.html": "0e80d59007e1e1f4740514ad7dc1f907a9530b7ca51703973b8498f21fa3da81",
+    "__csb_sw.rpfsli6sirrzs1630o3lgzuxwlr2uqc.js": "11511230c5dc59749e14fd4e75385532e3472bf8fd5cc15eb2e1eac5a08b9422",
+    "__csb_relay/__csb_relay.30yfeq026i8arwjbp19vlgcep8e6tgf.js": "baf40a26daf3d0658df231e90ef9e1f738924e636cf33196138b942f529851d4",
+    "__csb_relay/index.html": "30cdcee76f8a8c822619a190b612fd41a14b277d9bd8a91a5777b35cedbc07fa"
+  },
+  "staticPreviewPatch": "CSP/Referrer-Policy/nosniff added to browser-generated Service Worker responses, not only nginx relay headers",
+  "previewVendorAssets": {
+    "tailwind.3.4.17.js": {
+      "source": "https://cdn.tailwindcss.com/3.4.17",
+      "SHA256": "176e894661aa9cdc9a5cba6c720044cbbf7b8bd80d1c9a142a7c24b1b6c50d15",
+      "bytes": 407279
+    },
+    "jszip.3.10.1.js": {
+      "source": "https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js",
+      "SHA256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e",
+      "bytes": 97630
+    },
+    "docx-preview.0.3.7.js": {
+      "source": "https://cdn.jsdelivr.net/npm/docx-preview@0.3.7/dist/docx-preview.min.js",
+      "SHA256": "a011a499016a269eb048b8558a3eefc94bc33568ef434235943948ff24a40005",
+      "bytes": 74315
+    }
+  },
+  "nativePreviewRewrites": "Only 3 fixed native CDN URLs -> same-origin pinned assets; native Office meta CSP adjusted to self for these scripts. No LibreChat code changed.",
+  "staticBrowserServerNpmSource": {
+    "version": "1.0.3",
+    "tarball": "https://registry.npmjs.org/static-browser-server/-/static-browser-server-1.0.3.tgz",
+    "integrity": "sha512-ZUyfgGDdFRbZGGJQ1YhiM930Yczz5VlbJObrQLlk24+qNHVQx4OlLcYswEUo3bIyNAbQUIUR9Yr5/Hqjzqb4zA==",
+    "gitHead": "8b49725a29917d79d072dc641b4b83ada8dc0cd1"
+  }
+}

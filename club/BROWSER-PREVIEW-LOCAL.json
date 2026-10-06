@@ -1,0 +1,1994 @@
+[
+  {
+    "engine": "chromium",
+    "scope": "Actual dc10 production UI, local TLS test relay; domain blocking simulation, not a browser extension",
+    "requests": [
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/index.Cc5sxa1O.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/rolldown-runtime.B0Z9INg1.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/polyfills.CEDm44Cr.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/advanced-inputs.0gHsBjsU.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/codemirror-core.r8uhyzQ3.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/http-client.C5fr6Lnu.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/mermaid.DR3Y61_6.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/query-devtools.DIz6FZCX.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/validation.Bd3jvxDI.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/animations.BHEQrG-H.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/react-vtree.BInx5Ne5.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/vendor.T3kcQYnP.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/i18n.CenFdT2j.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/react-interactions.BEfrmSAG.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/routing.B1O2pwc0.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/radix-ui.BGubVf3o.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/tanstack-vendor.C7oK5bXW.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/avatars.DwBzmTCp.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/framer-motion.6mTbS3M5.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/virtualization.qk4MbL4Q.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/headlessui.8omgZzEp.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/markdown-processing.CjMf2xPH.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/utilities.HUTk6tC6.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/date-utils.C_DbPEjY.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/forms.DQMwNapF.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/math-katex.dI9Ti9PO.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/hooks.BFc35Qga.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/SetKeyDialog.Bcl4FuzI.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/security-ui.B17a9jwF.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/ProjectEditDialog.B-l2ztSr.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/forms.Bz9l2FZ1.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/MyFilesModal.BbuncJsO.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/queries.CQ578WzG.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/markdown.BpV6n6Zw.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/eventSelection.CGKEy8lu.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/math-katex.uZ8_QngQ.css"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/index.DrfP_ick.css"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/registerSW.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/silence.mp3"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/auth/refresh"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/silence.mp3"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/AccountSettings.C3ivWLMv.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/fonts/Inter-Bold.woff2"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/fonts/Inter-Regular.woff2"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/banner"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/endpoints"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/projects"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/chat/active"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user/settings/favorites"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user/settings/pinned-order"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/speech/config/get"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/models"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/search/enable"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/roles/USER"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user/settings/favorites"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools/refresh"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/digiconseil/usage"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/keys"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/presets"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/tags"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/share/link/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/servers"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/messages/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/tools/web_search/auth"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/endpoints/token-config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/tools/calls"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools/refresh"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/connection/status"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/fonts/Inter-SemiBold.woff2"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/6293cdca-4ada-4b03-aeec-bdf08b108947/preview"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/67d83f61-8077-4cc0-9f81-6736c3ed428c/preview"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/chat/status/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/health"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/prompts/groups"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/permissions/mcpServer/effective/all"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/Artifacts.DMnVpZLo.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/code-editor.D4qHd5re.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/SandboxArtifactTabs.DG1-mveh.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/sandpack.DhR5I-6S.js"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_relay/"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_relay/__csb_relay.30yfeq026i8arwjbp19vlgcep8e6tgf.js"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/7e2321eb-95d1-4147-8848-8e19d0e293d3"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/3bdb01cb-e576-451c-92b4-d4a0a8b7df1a"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/jszip.3.10.1.js"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/docx-preview.0.3.7.js"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/6293cdca-4ada-4b03-aeec-bdf08b108947"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/67d83f61-8077-4cc0-9f81-6736c3ed428c"
+      }
+    ],
+    "errors": [],
+    "files": [
+      {
+        "filename": "bilan.html",
+        "nativeCardCount": 1,
+        "frames": [
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+          },
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/assets/silence.mp3"
+          },
+          {
+            "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+            "path": "/"
+          },
+          {
+            "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+            "path": "/__csb_relay/"
+          }
+        ],
+        "renderedText": [
+          "Bilan des montants\n\nSynthèse de toutes les feuilles — 6 octobre 2026\n\nFeuille\tNombre de valeurs\tSomme de amount\nA\t2\t30,00\nB\t2\t15,00\nTOTAL\t4\t45,00\n\nSource : input.xlsx — colonne « amount »."
+        ],
+        "generatedCSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+        "timeoutText": 0,
+        "downloadControls": [
+          {
+            "title": null,
+            "aria": "Download bilan.html",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.docx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.xlsx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download create_bilan.py",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download Artifact",
+            "text": ""
+          }
+        ],
+        "download": {
+          "filename": "bilan.html",
+          "bytes": 1733,
+          "sha256": "e99ff9cca8d9f9b57d11c3c0a0eda44c88a974304a023cafb7f64023dbb894de"
+        }
+      },
+      {
+        "filename": "bilan.pdf",
+        "nativeCardCount": 0,
+        "pdfPanelNative": false,
+        "nativeFileCardCount": 1,
+        "download": {
+          "filename": "bilan.pdf",
+          "bytes": 44168,
+          "sha256": "96f2b3c6204b1350acf85d686ca7358e697dde5f4b9d74e1574a35207eb76b9f"
+        }
+      },
+      {
+        "filename": "bilan.docx",
+        "nativeCardCount": 1,
+        "frames": [
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+          },
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/assets/silence.mp3"
+          },
+          {
+            "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+            "path": "/"
+          },
+          {
+            "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+            "path": "/__csb_relay/"
+          }
+        ],
+        "renderedText": [
+          "Bilan des montants\n\nSynthèse de toutes les feuilles — 6 octobre 2026\n\nFeuille\n\n\t\n\nNombre de valeurs\n\n\t\n\nSomme de amount\n\n\n\n\nA\n\n\t\n\n2\n\n\t\n\n30,00\n\n\n\n\nB\n\n\t\n\n2\n\n\t\n\n15,00\n\n\n\n\nTOTAL\n\n\t\n\n4\n\n\t\n\n45,00\n\nSource : input.xlsx — colonne « amount »."
+        ],
+        "generatedCSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+        "timeoutText": 0,
+        "downloadControls": [
+          {
+            "title": null,
+            "aria": "Download bilan.html",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.docx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.xlsx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download create_bilan.py",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download Artifact",
+            "text": ""
+          }
+        ],
+        "download": {
+          "filename": "bilan.docx",
+          "bytes": 37070,
+          "sha256": "9178cda3e8d868a4c0c9380aa9893aaa34ecad7f7dd8cb1e3593d75e3c3a0159"
+        }
+      },
+      {
+        "filename": "bilan.xlsx",
+        "nativeCardCount": 1,
+        "frames": [
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+          },
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/assets/silence.mp3"
+          },
+          {
+            "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+            "path": "/"
+          },
+          {
+            "host": "27c64572dd6b920-preview.artefacts.digiconseil.fr",
+            "path": "/__csb_relay/"
+          }
+        ],
+        "renderedText": [
+          "Bilan des montants\nSynthèse de toutes les feuilles — 6 octobre 2026\n\t\t\nFeuille\tNombre de valeurs\tSomme de amount\nA\t2\t30.00\nB\t2\t15.00\nTOTAL\t4\t45.00\n\t\t\nSource : input.xlsx — colonne « amount »."
+        ],
+        "generatedCSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+        "timeoutText": 0,
+        "downloadControls": [
+          {
+            "title": null,
+            "aria": "Download bilan.html",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.docx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.xlsx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download create_bilan.py",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download Artifact",
+            "text": ""
+          }
+        ],
+        "download": {
+          "filename": "bilan.xlsx",
+          "bytes": 5551,
+          "sha256": "628afedc936cedeca78fcd26036653d84533e0fc1b56fff74ed5949074a41ec7"
+        }
+      }
+    ],
+    "page": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6",
+    "fileButtons": [
+      "bilan.pdfDocument",
+      "bilan.htmlHTMLOpens as a rendered preview Click to open",
+      "bilan.docxDocumentOpens as a rendered preview Click to open",
+      "bilan.xlsxSpreadsheetOpens as a rendered preview Click to open",
+      "create_bilan.pypythonOpens as source Click to open"
+    ],
+    "codeSandboxRequests": []
+  },
+  {
+    "engine": "firefox",
+    "scope": "Actual dc10 production UI, local TLS test relay; domain blocking simulation, not a browser extension",
+    "requests": [
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/index.Cc5sxa1O.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/rolldown-runtime.B0Z9INg1.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/polyfills.CEDm44Cr.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/advanced-inputs.0gHsBjsU.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/codemirror-core.r8uhyzQ3.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/http-client.C5fr6Lnu.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/mermaid.DR3Y61_6.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/query-devtools.DIz6FZCX.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/validation.Bd3jvxDI.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/animations.BHEQrG-H.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/react-vtree.BInx5Ne5.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/vendor.T3kcQYnP.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/i18n.CenFdT2j.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/react-interactions.BEfrmSAG.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/routing.B1O2pwc0.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/radix-ui.BGubVf3o.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/tanstack-vendor.C7oK5bXW.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/avatars.DwBzmTCp.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/framer-motion.6mTbS3M5.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/virtualization.qk4MbL4Q.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/headlessui.8omgZzEp.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/markdown-processing.CjMf2xPH.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/utilities.HUTk6tC6.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/date-utils.C_DbPEjY.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/forms.DQMwNapF.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/math-katex.dI9Ti9PO.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/hooks.BFc35Qga.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/SetKeyDialog.Bcl4FuzI.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/security-ui.B17a9jwF.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/ProjectEditDialog.B-l2ztSr.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/forms.Bz9l2FZ1.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/MyFilesModal.BbuncJsO.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/queries.CQ578WzG.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/markdown.BpV6n6Zw.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/eventSelection.CGKEy8lu.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/math-katex.uZ8_QngQ.css"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/index.DrfP_ick.css"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/registerSW.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/apple-touch-icon-180x180.png"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/favicon-16x16.png"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/silence.mp3"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/auth/refresh"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/AccountSettings.C3ivWLMv.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/fonts/Inter-Bold.woff2"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/fonts/Inter-Regular.woff2"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/banner"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/endpoints"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/projects"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/chat/active"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user/settings/favorites"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user/settings/pinned-order"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/speech/config/get"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/models"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/search/enable"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/roles/USER"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user/settings/favorites"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools/refresh"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/digiconseil/usage"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/keys"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/presets"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/tags"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/share/link/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/servers"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/messages/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/tools/web_search/auth"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/endpoints/token-config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/tools/calls"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools/refresh"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/connection/status"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/health"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/fonts/Inter-SemiBold.woff2"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/6293cdca-4ada-4b03-aeec-bdf08b108947/preview"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/67d83f61-8077-4cc0-9f81-6736c3ed428c/preview"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/chat/status/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/prompts/groups"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/permissions/mcpServer/effective/all"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/Artifacts.DMnVpZLo.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/code-editor.D4qHd5re.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/SandboxArtifactTabs.DG1-mveh.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/sandpack.DhR5I-6S.js"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_relay/"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_relay/__csb_relay.30yfeq026i8arwjbp19vlgcep8e6tgf.js"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/7e2321eb-95d1-4147-8848-8e19d0e293d3"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/3bdb01cb-e576-451c-92b4-d4a0a8b7df1a"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/jszip.3.10.1.js"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/docx-preview.0.3.7.js"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/6293cdca-4ada-4b03-aeec-bdf08b108947"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools"
+      },
+      {
+        "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/67d83f61-8077-4cc0-9f81-6736c3ed428c"
+      }
+    ],
+    "errors": [],
+    "files": [
+      {
+        "filename": "bilan.html",
+        "nativeCardCount": 1,
+        "frames": [
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+          },
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/assets/silence.mp3"
+          },
+          {
+            "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+            "path": "/"
+          },
+          {
+            "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+            "path": "/__csb_relay/"
+          }
+        ],
+        "renderedText": [
+          "Bilan des montants\n\nSynthèse de toutes les feuilles — 6 octobre 2026\n\nFeuille\tNombre de valeurs\tSomme de amount\nA\t2\t30,00\nB\t2\t15,00\nTOTAL\t4\t45,00\n\nSource : input.xlsx — colonne « amount »."
+        ],
+        "generatedCSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+        "timeoutText": 0,
+        "downloadControls": [
+          {
+            "title": null,
+            "aria": "Download bilan.html",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.docx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.xlsx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download create_bilan.py",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download Artifact",
+            "text": ""
+          }
+        ],
+        "download": {
+          "filename": "bilan.html",
+          "bytes": 1733,
+          "sha256": "e99ff9cca8d9f9b57d11c3c0a0eda44c88a974304a023cafb7f64023dbb894de"
+        }
+      },
+      {
+        "filename": "bilan.pdf",
+        "nativeCardCount": 0,
+        "pdfPanelNative": false,
+        "nativeFileCardCount": 1,
+        "download": {
+          "filename": "bilan.pdf",
+          "bytes": 44168,
+          "sha256": "96f2b3c6204b1350acf85d686ca7358e697dde5f4b9d74e1574a35207eb76b9f"
+        }
+      },
+      {
+        "filename": "bilan.docx",
+        "nativeCardCount": 1,
+        "frames": [
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+          },
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/assets/silence.mp3"
+          },
+          {
+            "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+            "path": "/"
+          },
+          {
+            "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+            "path": "/__csb_relay/"
+          }
+        ],
+        "renderedText": [
+          "Bilan des montants\n\nSynthèse de toutes les feuilles — 6 octobre 2026\n\nFeuille\n\n\t\n\nNombre de valeurs\n\n\t\n\nSomme de amount\n\n\n\n\nA\n\n\t\n\n2\n\n\t\n\n30,00\n\n\n\n\nB\n\n\t\n\n2\n\n\t\n\n15,00\n\n\n\n\nTOTAL\n\n\t\n\n4\n\n\t\n\n45,00\n\nSource : input.xlsx — colonne « amount »."
+        ],
+        "generatedCSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+        "timeoutText": 0,
+        "downloadControls": [
+          {
+            "title": null,
+            "aria": "Download bilan.html",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.docx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.xlsx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download create_bilan.py",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download Artifact",
+            "text": ""
+          }
+        ],
+        "download": {
+          "filename": "bilan.docx",
+          "bytes": 37070,
+          "sha256": "9178cda3e8d868a4c0c9380aa9893aaa34ecad7f7dd8cb1e3593d75e3c3a0159"
+        }
+      },
+      {
+        "filename": "bilan.xlsx",
+        "nativeCardCount": 1,
+        "frames": [
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+          },
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/assets/silence.mp3"
+          },
+          {
+            "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+            "path": "/"
+          },
+          {
+            "host": "27c64579dd3f060-preview.artefacts.digiconseil.fr",
+            "path": "/__csb_relay/"
+          }
+        ],
+        "renderedText": [
+          "Bilan des montants\nSynthèse de toutes les feuilles — 6 octobre 2026\n\t\t\nFeuille\tNombre de valeurs\tSomme de amount\nA\t2\t30.00\nB\t2\t15.00\nTOTAL\t4\t45.00\n\t\t\nSource : input.xlsx — colonne « amount »."
+        ],
+        "generatedCSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+        "timeoutText": 0,
+        "downloadControls": [
+          {
+            "title": null,
+            "aria": "Download bilan.html",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.docx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.xlsx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download create_bilan.py",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download Artifact",
+            "text": ""
+          }
+        ],
+        "download": {
+          "filename": "bilan.xlsx",
+          "bytes": 5551,
+          "sha256": "628afedc936cedeca78fcd26036653d84533e0fc1b56fff74ed5949074a41ec7"
+        }
+      }
+    ],
+    "page": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6",
+    "fileButtons": [
+      "bilan.pdfDocument",
+      "bilan.htmlHTMLOpens as a rendered preview Click to open",
+      "bilan.docxDocumentOpens as a rendered preview Click to open",
+      "bilan.xlsxSpreadsheetOpens as a rendered preview Click to open",
+      "create_bilan.pypythonOpens as source Click to open"
+    ],
+    "codeSandboxRequests": []
+  },
+  {
+    "engine": "webkit",
+    "scope": "Actual dc10 production UI, local TLS test relay; domain blocking simulation, not a browser extension",
+    "requests": [
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/index.Cc5sxa1O.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/rolldown-runtime.B0Z9INg1.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/polyfills.CEDm44Cr.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/advanced-inputs.0gHsBjsU.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/codemirror-core.r8uhyzQ3.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/http-client.C5fr6Lnu.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/mermaid.DR3Y61_6.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/query-devtools.DIz6FZCX.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/validation.Bd3jvxDI.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/animations.BHEQrG-H.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/react-vtree.BInx5Ne5.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/vendor.T3kcQYnP.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/i18n.CenFdT2j.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/react-interactions.BEfrmSAG.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/routing.B1O2pwc0.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/radix-ui.BGubVf3o.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/tanstack-vendor.C7oK5bXW.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/avatars.DwBzmTCp.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/framer-motion.6mTbS3M5.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/virtualization.qk4MbL4Q.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/headlessui.8omgZzEp.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/markdown-processing.CjMf2xPH.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/utilities.HUTk6tC6.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/date-utils.C_DbPEjY.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/forms.DQMwNapF.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/math-katex.dI9Ti9PO.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/hooks.BFc35Qga.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/SetKeyDialog.Bcl4FuzI.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/security-ui.B17a9jwF.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/ProjectEditDialog.B-l2ztSr.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/forms.Bz9l2FZ1.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/MyFilesModal.BbuncJsO.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/queries.CQ578WzG.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/markdown.BpV6n6Zw.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/eventSelection.CGKEy8lu.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/math-katex.uZ8_QngQ.css"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/index.DrfP_ick.css"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/manifest.webmanifest"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/registerSW.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/sw.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/auth/refresh"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/fonts/Inter-Regular.woff2"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/silence.mp3"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/silence.mp3"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/silence.mp3"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/AccountSettings.C3ivWLMv.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/fonts/Inter-SemiBold.woff2"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/banner"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/endpoints"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/projects"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/chat/active"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user/settings/favorites"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user/settings/pinned-order"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/speech/config/get"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/models"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/search/enable"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/roles/USER"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/fonts/Inter-Bold.woff2"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/digiconseil/usage"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/user/settings/favorites"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/convos"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools/refresh"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/keys"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/presets"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/tags"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/share/link/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/servers"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/messages/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/tools/web_search/auth"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/endpoints/token-config"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/tools/calls"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools/refresh"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/tools"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/health"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/6293cdca-4ada-4b03-aeec-bdf08b108947/preview"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/67d83f61-8077-4cc0-9f81-6736c3ed428c/preview"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/agents/chat/status/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/mcp/connection/status"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/prompts/groups"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/permissions/mcpServer/effective/all"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/Artifacts.DMnVpZLo.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/code-editor.D4qHd5re.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/SandboxArtifactTabs.DG1-mveh.js"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/assets/sandpack.DhR5I-6S.js"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_relay/"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_relay/__csb_relay.30yfeq026i8arwjbp19vlgcep8e6tgf.js"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_sw.rpfsli6sirrzs1630o3lgzuxwlr2uqc.js"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/7e2321eb-95d1-4147-8848-8e19d0e293d3"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/3bdb01cb-e576-451c-92b4-d4a0a8b7df1a"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/docx-preview.0.3.7.js"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/jszip.3.10.1.js"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/6293cdca-4ada-4b03-aeec-bdf08b108947"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/__csb_vendor/tailwind.3.4.17.js"
+      },
+      {
+        "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+        "path": "/"
+      },
+      {
+        "host": "librechat.digiconseil.fr",
+        "path": "/api/files/download/6abbd6047b26d81b3e67bd73/67d83f61-8077-4cc0-9f81-6736c3ed428c"
+      }
+    ],
+    "errors": [
+      "Viewport argument key \"interactive-widget\" not recognized and ignored.",
+      "librechat.digiconseil.fr/assets/silence.mp3 Plug-in handled load",
+      "Failed to load resource: Plug-in handled load",
+      "librechat.digiconseil.fr/ Load request cancelled",
+      "Error while parsing the 'sandbox' attribute: 'allow-presentation' is an invalid sandbox flag."
+    ],
+    "files": [
+      {
+        "filename": "bilan.html",
+        "nativeCardCount": 1,
+        "frames": [
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+          },
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/assets/silence.mp3"
+          },
+          {
+            "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+            "path": "/"
+          },
+          {
+            "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+            "path": "/__csb_relay/"
+          }
+        ],
+        "renderedText": [
+          "Bilan des montants\n\nSynthèse de toutes les feuilles — 6 octobre 2026\n\nFeuille\tNombre de valeurs\tSomme de amount\nA\t2\t30,00\nB\t2\t15,00\nTOTAL\t4\t45,00\n\nSource : input.xlsx — colonne « amount »."
+        ],
+        "generatedCSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+        "timeoutText": 0,
+        "downloadControls": [
+          {
+            "title": null,
+            "aria": "Download bilan.html",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.docx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.xlsx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download create_bilan.py",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download Artifact",
+            "text": ""
+          }
+        ],
+        "download": {
+          "filename": "bilan.html",
+          "bytes": 1733,
+          "sha256": "e99ff9cca8d9f9b57d11c3c0a0eda44c88a974304a023cafb7f64023dbb894de"
+        }
+      },
+      {
+        "filename": "bilan.pdf",
+        "nativeCardCount": 0,
+        "pdfPanelNative": false,
+        "nativeFileCardCount": 1,
+        "download": {
+          "filename": "bilan.pdf",
+          "bytes": 44168,
+          "sha256": "96f2b3c6204b1350acf85d686ca7358e697dde5f4b9d74e1574a35207eb76b9f"
+        }
+      },
+      {
+        "filename": "bilan.docx",
+        "nativeCardCount": 1,
+        "frames": [
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+          },
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/assets/silence.mp3"
+          },
+          {
+            "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+            "path": "/"
+          },
+          {
+            "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+            "path": "/__csb_relay/"
+          }
+        ],
+        "renderedText": [
+          "Bilan des montants\n\nSynthèse de toutes les feuilles — 6 octobre 2026\n\nFeuille\n\nNombre de valeurs\n\nSomme de amount\n\n\nA\n\n2\n\n30,00\n\n\nB\n\n2\n\n15,00\n\n\nTOTAL\n\n4\n\n45,00\n\n\nSource : input.xlsx — colonne « amount »."
+        ],
+        "generatedCSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+        "timeoutText": 0,
+        "downloadControls": [
+          {
+            "title": null,
+            "aria": "Download bilan.html",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.docx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.xlsx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download create_bilan.py",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download Artifact",
+            "text": ""
+          }
+        ],
+        "download": {
+          "filename": "bilan.docx",
+          "bytes": 37070,
+          "sha256": "9178cda3e8d868a4c0c9380aa9893aaa34ecad7f7dd8cb1e3593d75e3c3a0159"
+        }
+      },
+      {
+        "filename": "bilan.xlsx",
+        "nativeCardCount": 1,
+        "frames": [
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6"
+          },
+          {
+            "host": "librechat.digiconseil.fr",
+            "path": "/assets/silence.mp3"
+          },
+          {
+            "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+            "path": "/"
+          },
+          {
+            "host": "27c64580e4e0440-preview.artefacts.digiconseil.fr",
+            "path": "/__csb_relay/"
+          }
+        ],
+        "renderedText": [
+          "Bilan des montants\nSynthèse de toutes les feuilles — 6 octobre 2026\n\nFeuille\tNombre de valeurs\tSomme de amount\nA\t2\t30.00\nB\t2\t15.00\nTOTAL\t4\t45.00\n\nSource : input.xlsx — colonne « amount »."
+        ],
+        "generatedCSP": "default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://unpkg.com https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cdn.jsdelivr.net https://data.jsdelivr.com https://unpkg.com https://registry.npmjs.org https://esm.sh; worker-src 'self' blob:; frame-src 'self' blob:; frame-ancestors https://librechat.digiconseil.fr https://librechat-preprod.digiconseil.fr; object-src 'none'; base-uri 'self'",
+        "timeoutText": 0,
+        "downloadControls": [
+          {
+            "title": null,
+            "aria": "Download bilan.html",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.docx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download bilan.xlsx",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download create_bilan.py",
+            "text": ""
+          },
+          {
+            "title": null,
+            "aria": "Download Artifact",
+            "text": ""
+          }
+        ],
+        "download": {
+          "filename": "bilan.xlsx",
+          "bytes": 5551,
+          "sha256": "628afedc936cedeca78fcd26036653d84533e0fc1b56fff74ed5949074a41ec7"
+        }
+      }
+    ],
+    "page": "/c/4d81f8b6-4c73-5780-a346-6dd0e0e7fab6",
+    "fileButtons": [
+      "bilan.pdfDocument",
+      "bilan.htmlHTMLOpens as a rendered preview Click to open",
+      "bilan.docxDocumentOpens as a rendered preview Click to open",
+      "bilan.xlsxSpreadsheetOpens as a rendered preview Click to open",
+      "create_bilan.pypythonOpens as source Click to open"
+    ],
+    "codeSandboxRequests": []
+  }
+]
