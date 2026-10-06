@@ -1,6 +1,6 @@
 # Dépôts de la plateforme IA — 6 octobre 2026
 
-Inventaire en lecture seule des checkouts de Pépinière et de leurs remotes. Métadonnées des dépôts GitHub ci-dessous vérifiées avec l'authentification existante ; trois dépôts Gitea vérifiés avec le gestionnaire monitoring. Aucun dépôt déplacé, aucun code/runtime SVE modifié ou testé. Les versions locales peuvent comporter des commits non poussés : cette liste situe les dépôts, elle ne certifie pas leur synchronisation.
+Inventaire en lecture seule des checkouts de Pépinière et de leurs remotes. Métadonnées des dépôts GitHub ci-dessous vérifiées avec l'authentification existante ; quatre dépôts Gitea vérifiés avec le gestionnaire monitoring. Aucun dépôt déplacé, aucun code/runtime SVE modifié ou testé. Les versions locales peuvent comporter des commits non poussés : cette liste situe les dépôts, elle ne certifie pas leur synchronisation.
 
 ## Gitea
 
@@ -9,9 +9,9 @@ Inventaire en lecture seule des checkouts de Pépinière et de leurs remotes. M�
 | `/srv/projects/librechat-preprod` | [Digiconseil/librechat-preprod](https://git.digiconseil.fr/Digiconseil/librechat-preprod) | Privé, API vérifiée |
 | `/srv/projects/websearch` | [Digiconseil/websearch-c94](https://git.digiconseil.fr/Digiconseil/websearch-c94) | Privé, API vérifiée |
 | `/srv/projects/monitoring` | [infra/monitoring](https://git.digiconseil.fr/infra/monitoring) | Privé, API vérifiée |
-| `/srv/projects/librechat-artefacts` | [Digiconseil/librechat-artefacts](https://git.digiconseil.fr/Digiconseil/librechat-artefacts) | Destination privée autorisée ; création UI encore nécessaire au contrôle |
+| `/srv/projects/librechat-artefacts` | [Digiconseil/librechat-artefacts](https://git.digiconseil.fr/Digiconseil/librechat-artefacts) | Privé, push HTTPS et 11 références vérifiés |
 
-L'API Gitea indique 1.24.6. Le jeton existant permet de lire les trois dépôts et d'utiliser les droits du compte pour le push ; la création d'un dépôt d'organisation par API retourne 403 faute de scope organization. L'API privée interdit l'inventaire global sans scope organisation : la liste ci-dessus porte sur les checkouts vérifiés, pas tous les dépôts du serveur.
+L'API Gitea indique 1.24.6. Le jeton existant permet de lire les trois dépôts et d'utiliser les droits du compte pour le push ; la création d'un dépôt d'organisation par API retourne 403 faute de scope organization. Le dépôt artefacts créé par Maxime est publié : deux branches et neuf tags, branche par défaut `codex/club-artefacts`. L'API privée interdit l'inventaire global sans scope organisation : la liste ci-dessus porte sur les checkouts vérifiés, pas tous les dépôts du serveur.
 
 ## GitHub — dépôts DigiConseil vérifiés
 
