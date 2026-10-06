@@ -1,6 +1,6 @@
 # Artefacts Club — service statique auto-hébergé
 
-Déploiement local effectué le 6 octobre 2026. Publication HTTPS publique et activation des variables dans LibreChat **en attente d'Hermione**, protégées par `activate-preview.py`.
+Publication HTTPS principal/wildcard et activation native **terminées le 6 octobre 2026**. Les deux web (préproduction puis production) sont déployés ; la recette publique de production passe : neuf aperçus Excel/Word/HTML et douze téléchargements originaux sur Chromium/Firefox/WebKit, sans requête CodeSandbox. Voir `ACTIVATION-PUBLIQUE-2026-10-06.md` et les captures publiques.
 
 Ce dépôt est le fork `MaximeDigiFactory/codesandbox-client-club`, branche `codex/club-artefacts`, basé sur le commit LibreChat-AI `5877b8427e85b457dbb4f92209b1e8a2489cfa3b`. Le ZIP officiel bundler-v12 est vérifié par SHA256 ; sa chaîne version confirme ce commit. Le fichier SOURCE-LOCK.json précise également l'intégrité npm de static-browser-server 1.0.3, version requise par le client Sandpack 2.19.8 de dc10.
 
@@ -14,7 +14,7 @@ python3 /srv/projects/librechat-artefacts/club/prepare-assets.py
 /srv/projects/deploy.sh deploy librechat-artefacts prod
 ```
 
-Ne jamais substituer une étiquette à `club/IMAGE.json`/docker-compose.yml. L'image en service est locale, `pull_policy: never` ; son archive de reprise est sous `state/images-artefacts.tar`, ignorée par Git. Projet Infisical `librechat-artefacts` enregistré via deploy.sh, **aucun secret requis**.
+Ne jamais substituer une étiquette à `club/IMAGE.json`/docker-compose.yml. L'image en service est locale, `pull_policy: never` ; son archive de reprise est sous `state/images-artefacts.tar`, ignorée par Git. Projet Infisical `librechat-artefacts` enregistré via deploy.sh ; le serveur statique ne requiert aucun secret. Les secrets DNS-01 restent séparés dans `/dns-hermione` et `/hermione-bootstrap`, avec l’identité de lecture dédiée à Hermione.
 
 Le seul réseau du serveur est `librechat-artefacts-net`, `internal: true`. Le nginx-proxy existant a une appartenance persistée à ce réseau ; pas de proxy-net, réseau applicatif, calcul ou port publié sur le serveur statique. Utilisateur 101, capabilities ALL supprimées, no-new-privileges, rootfs lecture seule, tmpfs 32 Mio, mémoire 256 Mio, 0,5 CPU, 64 PID, journaux 3 × 5 Mio. Le proxy n'a pas été redémarré/recréé par cette intervention.
 
@@ -35,7 +35,9 @@ Les cookies LibreChat sont host-only ; aucune déclaration Domain=.digiconseil.f
 
 FILE-RECIPE.json : génération normale USER, aucune approval, aucun faux lien, feuilles A=30/B=15/total=45. POST-REBOOT-DOWNLOADS.json : originaux inchangés après le redémarrage hôte intervenu pendant la session, sans redémarrage déclenché par Codex.
 
-BROWSER-PREVIEW-LOCAL.json : Chromium 149, Firefox 151, WebKit 26.5, interface dc10 réelle sur compte technique et documents synthétiques. Neuf aperçus (Excel/Word/HTML × trois moteurs) affichent 45 ; douze téléchargements originaux (incluant PDF) sont identiques aux SHA256 de la recette serveur. Word est rendu sans fallback de fidélité. Aucune requête codesandbox.io/csbops.io ni CDN externe pour ces aperçus. Le PDF possède une carte native et se télécharge ; **dc10 n'a pas de lecteur PDF dans le panneau Sandpack**.
+BROWSER-PREVIEW-PUBLIC.json et BROWSER-PREVIEW-PUBLIC-SUMMARY.json : qualification publique du 6 octobre, configuration native réelle, certificat public validé, neuf aperçus et douze téléchargements conformes, aucune requête CodeSandbox. Ces tests utilisent un blocage de domaines ; ils ne constituent pas un test de Chrome/Safari réels avec une extension publicitaire.
+
+BROWSER-PREVIEW-LOCAL.json : qualification antérieure avec relais local, Chromium 149, Firefox 151, WebKit 26.5, interface dc10 réelle sur compte technique et documents synthétiques. Neuf aperçus (Excel/Word/HTML × trois moteurs) affichent 45 ; douze téléchargements originaux (incluant PDF) sont identiques aux SHA256 de la recette serveur. Word est rendu sans fallback de fidélité. Aucune requête codesandbox.io/csbops.io ni CDN externe pour ces aperçus. Le PDF possède une carte native et se télécharge ; **dc10 n'a pas de lecteur PDF dans le panneau Sandpack**.
 
 La qualification locale remplace dans le seul navigateur la configuration bundler par les URL finales et utilise un relais TLS/DNS jetable, avec certificat de test et autorisation LNA pour l'adresse privée de la fixture Chromium. Aucun certificat ou DNS public n'a été remplacé. Les requêtes de cookies/secrets ne sont jamais enregistrées dans la capture ; seules host/path sont conservées. Le filtre de domaines simulateur n'est pas une extension publicitaire réelle. Chromium n'est pas Chrome de Maxime, WebKit n'est pas Safari réel : recette manuelle nécessaire après publication, bloqueur réel activé. Les conteneurs/clé de test ont été supprimés à la fin.
 

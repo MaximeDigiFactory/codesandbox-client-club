@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-06T22:36:47+02:00",
+  "instances": [
+    {
+      "instance": "librechat",
+      "role": "USER",
+      "authenticated": true,
+      "bundlerURL": "https://artefacts.digiconseil.fr",
+      "staticBundlerURL": "https://preview.artefacts.digiconseil.fr",
+      "runtimeURLs": {
+        "bundlerURL": "https://artefacts.digiconseil.fr",
+        "staticBundlerURL": "https://preview.artefacts.digiconseil.fr"
+      },
+      "containerEnvironmentVerified": true
+    },
+    {
+      "instance": "librechat-preprod",
+      "authenticated": false,
+      "technicalIdentityPresent": false,
+      "runtimeURLs": {
+        "bundlerURL": "https://artefacts.digiconseil.fr",
+        "staticBundlerURL": "https://preview.artefacts.digiconseil.fr"
+      },
+      "containerEnvironmentVerified": true
+    }
+  ],
+  "cors": [
+    {
+      "origin": "https://librechat.digiconseil.fr",
+      "status": 204,
+      "allowOrigin": "https://librechat.digiconseil.fr",
+      "cookies": false
+    },
+    {
+      "origin": "https://librechat-preprod.digiconseil.fr",
+      "status": 204,
+      "allowOrigin": "https://librechat-preprod.digiconseil.fr",
+      "cookies": false
+    },
+    {
+      "origin": "https://untrusted.invalid",
+      "status": 204,
+      "allowOrigin": null,
+      "cookies": false
+    }
+  ],
+  "tls": [
+    {
+      "host": "artefacts.digiconseil.fr",
+      "notAfter": "Jan  4 19:24:28 2027 GMT",
+      "subjectAltName": [
+        [
+          "DNS",
+          "*.artefacts.digiconseil.fr"
+        ],
+        [
+          "DNS",
+          "artefacts.digiconseil.fr"
+        ]
+      ]
+    },
+    {
+      "host": "fixture-preview.artefacts.digiconseil.fr",
+      "notAfter": "Jan  4 19:24:28 2027 GMT",
+      "subjectAltName": [
+        [
+          "DNS",
+          "*.artefacts.digiconseil.fr"
+        ],
+        [
+          "DNS",
+          "artefacts.digiconseil.fr"
+        ]
+      ]
+    }
+  ],
+  "serverUserRunCodeAllowed": true,
+  "jobAlert": {
+    "state": "inactive",
+    "health": "ok",
+    "lastEvaluation": "2026-10-06T20:37:20Z"
+  },
+  "parentDNS": {
+    "authority": "d.nic.fr",
+    "nameservers": [
+      "dns1.alwaysdata.com.",
+      "dns2.alwaysdata.com."
+    ],
+    "checkedAt": "2026-10-06T22:40:24+02:00"
+  },
+  "hermioneReported": {
+    "certificateExpiryDate": "2027-01-04",
+    "secondRunExitCode": 2,
+    "nextRunParis": "2026-10-07T03:29:00+02:00",
+    "k3sPreserved": true,
+    "restartPerformed": false,
+    "source": "Confirmation transmise par Maxime ; aucune intervention directe sur Hermione"
+  }
+}

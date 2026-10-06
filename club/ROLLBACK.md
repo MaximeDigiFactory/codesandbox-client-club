@@ -23,6 +23,10 @@ Le garde nftables et les piles de calcul/C94 ne sont jamais modifiés par ce rep
 
 ## Révision DNS-01 Hermione
 
-La procédure transmise n'a été ni installée ni exécutée par cette session sur Hermione. Le dossier Infisical `librechat-artefacts / prod /dns-hermione` a été créé ; aucune valeur de token déposée par l'agent. Sur Hermione, arrêter/désactiver seulement `artefacts-dns.timer` et `artefacts-dns.service`, restaurer les deux seuls fichiers gateway et les certificats artefacts sauvegardés, puis vérifier les autres domaines. Aucun drop-in Docker. Préserver les états privés ACME jusqu'à décision de suppression. Le retrait éventuel du token et de son identité doit vérifier leurs seuls consommateurs.
+La procédure a été installée et qualifiée dans la session Hermione selon le retour de Maxime du 6 octobre 2026 ; la session Pépinière n’est pas intervenue sur cet hôte. L’identité dédiée de lecture est remise et son périmètre qualifié. Le token Alwaysdata est dans Infisical `librechat-artefacts / prod /dns-hermione / ALWAYSDATA_API_TOKEN`, jamais affiché. Sur Hermione, arrêter/désactiver seulement `artefacts-dns.timer` et `artefacts-dns.service`, restaurer les deux seuls fichiers gateway et les certificats artefacts sauvegardés, puis vérifier les autres domaines. Aucun drop-in Docker. Préserver les états privés ACME jusqu'à décision de suppression. Le retrait éventuel du token et de son identité doit vérifier leurs seuls consommateurs.
 
 La proposition OVH retire seulement `ns1.sendinblue.com` et `ns2.sendinblue.com` de la délégation du domaine ; elle reste une décision de Maxime, et aucune modification DNS n'a été faite ici.
+
+## État après activation publique
+
+Le 6 octobre 2026, `activate-preview.py` a déployé les deux web avec `SANDPACK_BUNDLER_URL=https://artefacts.digiconseil.fr` et `SANDPACK_STATIC_BUNDLER_URL=https://preview.artefacts.digiconseil.fr`. Les deux sauvegardes `docker-compose.before-preview.yml` existent. Le retrait ciblé de ces deux seules variables, puis le redéploiement du seul web avec les commandes ci-dessus, est préférable si d’autres changements sont intervenus depuis la sauvegarde. Préserver les images, volumes, CodeAPI, rôles et fichiers membres. Aucun correctif LibreChat ajouté.

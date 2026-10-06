@@ -1,0 +1,35 @@
+[
+  {
+    "engine": "chromium",
+    "previews": 3,
+    "originalDownloads": 4,
+    "externalCodeSandboxRequests": 0,
+    "hosts": [
+      "27c67807301a860-preview.artefacts.digiconseil.fr",
+      "librechat.digiconseil.fr"
+    ],
+    "blocking": "domain interception, not a browser extension"
+  },
+  {
+    "engine": "firefox",
+    "previews": 3,
+    "originalDownloads": 4,
+    "externalCodeSandboxRequests": 0,
+    "hosts": [
+      "27c6780e2c53520-preview.artefacts.digiconseil.fr",
+      "librechat.digiconseil.fr"
+    ],
+    "blocking": "domain interception, not a browser extension"
+  },
+  {
+    "engine": "webkit",
+    "previews": 3,
+    "originalDownloads": 4,
+    "externalCodeSandboxRequests": 0,
+    "hosts": [
+      "3fa3f3551c1b30-preview.artefacts.digiconseil.fr",
+      "librechat.digiconseil.fr"
+    ],
+    "blocking": "domain interception, not a browser extension"
+  }
+]
