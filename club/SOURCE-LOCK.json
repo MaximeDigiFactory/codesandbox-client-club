@@ -6,13 +6,12 @@
   "sandpackClient": "2.19.8",
   "telemetry": "persistMeasurements source + fixed emitted function changed to Promise.resolve(); IS_ONPREM=true",
   "staticAssetsSHA256": {
-    "index.html": "b195168827bbb36796ea8acea2dd66aea839e440b03771d902563f5d9812d40a",
+    "index.html": "0e80d59007e1e1f4740514ad7dc1f907a9530b7ca51703973b8498f21fa3da81",
     "__csb_sw.rpfsli6sirrzs1630o3lgzuxwlr2uqc.js": "11511230c5dc59749e14fd4e75385532e3472bf8fd5cc15eb2e1eac5a08b9422",
-    "__csb_relay/__csb_relay.30yfeq026i8arwjbp19vlgcep8e6tgf.js": "9d6e4bbd0f96c16782ec43e5be0bca898d4984e58e8496738c494abb66d20b57",
-    "__csb_relay/index.html": "30cdcee76f8a8c822619a190b612fd41a14b277d9bd8a91a5777b35cedbc07fa",
-    "preview-unavailable-fallback.js": "8e87e79387602b2651a82ce2abd5d3cf4fd3198af66514a00d656b6e89a778df"
+    "__csb_relay/__csb_relay.30yfeq026i8arwjbp19vlgcep8e6tgf.js": "baf40a26daf3d0658df231e90ef9e1f738924e636cf33196138b942f529851d4",
+    "__csb_relay/index.html": "30cdcee76f8a8c822619a190b612fd41a14b277d9bd8a91a5777b35cedbc07fa"
   },
-  "staticPreviewPatch": "CSP/Referrer-Policy/nosniff added to browser-generated Service Worker responses, not only nginx relay headers; C103: message FR si Service Worker refusé (relay dégradé + fallback preview/index.html).",
+  "staticPreviewPatch": "CSP/Referrer-Policy/nosniff added to browser-generated Service Worker responses, not only nginx relay headers",
   "previewVendorAssets": {
     "tailwind.3.4.17.js": {
       "source": "https://cdn.tailwindcss.com/3.4.17",

@@ -207,14 +207,14 @@ async function start() {
       "Failed to ensure the relay has a Service Worker registered. See details below."
     );
     console.error(error);
-    return null;
+    return;
   });
+  await navigator.serviceWorker.ready;
 
-  if (worker) {
-    await navigator.serviceWorker.ready;
-    preventStaleTermination(worker);
-    workerReadyPromise.resolve(worker);
-  }
+  invariant(worker, "Failed to retrieve the worker instance: worker not found");
+  preventStaleTermination(worker);
+
+  workerReadyPromise.resolve(worker);
 
   // Wait until the parent sends the init event
   // via the MessageChannel, acknowledging that it recognized the relay.
