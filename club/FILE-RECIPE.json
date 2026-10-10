@@ -1,0 +1,43 @@
+{
+  "role": "USER",
+  "pendingApprovals": [],
+  "ordinaryConversation": true,
+  "modelSpec": "club-files-1",
+  "agentDedicated": false,
+  "falseLinks": false,
+  "sheets": [
+    "A",
+    "B"
+  ],
+  "total": 45,
+  "files": [
+    {
+      "filename": "bilan.html",
+      "bytes": 1733,
+      "sha256": "e99ff9cca8d9f9b57d11c3c0a0eda44c88a974304a023cafb7f64023dbb894de",
+      "nativeDownloadHTTP": 200
+    },
+    {
+      "filename": "bilan.pdf",
+      "bytes": 44168,
+      "sha256": "96f2b3c6204b1350acf85d686ca7358e697dde5f4b9d74e1574a35207eb76b9f",
+      "nativeDownloadHTTP": 200
+    },
+    {
+      "filename": "bilan.docx",
+      "bytes": 37070,
+      "sha256": "9178cda3e8d868a4c0c9380aa9893aaa34ecad7f7dd8cb1e3593d75e3c3a0159",
+      "nativeDownloadHTTP": 200
+    },
+    {
+      "filename": "bilan.xlsx",
+      "bytes": 5551,
+      "sha256": "628afedc936cedeca78fcd26036653d84533e0fc1b56fff74ed5949074a41ec7",
+      "nativeDownloadHTTP": 200
+    }
+  ],
+  "extraWorkspaceAttachments": [
+    "create_bilan.py"
+  ],
+  "userRunCode": true
+}

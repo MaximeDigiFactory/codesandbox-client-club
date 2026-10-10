@@ -1,0 +1,375 @@
+{
+  "at": "2026-10-06T12:58:19.534632+00:00",
+  "scope": "Read-only direct DNS queries from Pepiniere",
+  "queries": [
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "SOA",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28201\n;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "SOA",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 65382\n;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "NS",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63102\n;; flags: qr aa; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\ndigiconseil.fr.\t\t300\tIN\tNS\tdns1.alwaysdata.com.\ndigiconseil.fr.\t\t300\tIN\tNS\tdns2.alwaysdata.com.",
+      "error": ""
+    },
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "NS",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 34581\n;; flags: qr aa; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\ndigiconseil.fr.\t\t300\tIN\tNS\tdns1.alwaysdata.com.\ndigiconseil.fr.\t\t300\tIN\tNS\tdns2.alwaysdata.com.",
+      "error": ""
+    },
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "artefacts.digiconseil.fr",
+      "type": "A",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 61038\n;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\nartefacts.digiconseil.fr. 300\tIN\tA\t82.124.220.142",
+      "error": ""
+    },
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "artefacts.digiconseil.fr",
+      "type": "A",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54568\n;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\nartefacts.digiconseil.fr. 300\tIN\tA\t82.124.220.142",
+      "error": ""
+    },
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "_acme-challenge.artefacts.digiconseil.fr",
+      "type": "TXT",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62453\n;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; AUTHORITY SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "_acme-challenge.artefacts.digiconseil.fr",
+      "type": "TXT",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42971\n;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; AUTHORITY SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "CAA",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 41762\n;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; AUTHORITY SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns1.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "CAA",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44121\n;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; AUTHORITY SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "SOA",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64401\n;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "SOA",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 20111\n;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "NS",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62722\n;; flags: qr aa; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\ndigiconseil.fr.\t\t300\tIN\tNS\tdns1.alwaysdata.com.\ndigiconseil.fr.\t\t300\tIN\tNS\tdns2.alwaysdata.com.",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "NS",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3175\n;; flags: qr aa; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\ndigiconseil.fr.\t\t300\tIN\tNS\tdns1.alwaysdata.com.\ndigiconseil.fr.\t\t300\tIN\tNS\tdns2.alwaysdata.com.",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "artefacts.digiconseil.fr",
+      "type": "A",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 13661\n;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\nartefacts.digiconseil.fr. 300\tIN\tA\t82.124.220.142",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "artefacts.digiconseil.fr",
+      "type": "A",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 7820\n;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; ANSWER SECTION:\nartefacts.digiconseil.fr. 300\tIN\tA\t82.124.220.142",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "_acme-challenge.artefacts.digiconseil.fr",
+      "type": "TXT",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 53817\n;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; AUTHORITY SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "_acme-challenge.artefacts.digiconseil.fr",
+      "type": "TXT",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59115\n;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; AUTHORITY SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "CAA",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43486\n;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; AUTHORITY SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "dns2.alwaysdata.com",
+      "name": "digiconseil.fr",
+      "type": "CAA",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63343\n;; flags: qr aa; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n;; AUTHORITY SECTION:\ndigiconseil.fr.\t\t300\tIN\tSOA\tdns1.alwaysdata.com. hostmaster.alwaysdata.com. 1791059132 3600 900 1209600 300",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "SOA",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 23255\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "SOA",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 15874\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "NS",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 57390\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "NS",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 40657\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "artefacts.digiconseil.fr",
+      "type": "A",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 65091\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "artefacts.digiconseil.fr",
+      "type": "A",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 52493\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "_acme-challenge.artefacts.digiconseil.fr",
+      "type": "TXT",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 47825\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "_acme-challenge.artefacts.digiconseil.fr",
+      "type": "TXT",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 47080\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "CAA",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 21948\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns1.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "CAA",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 42525\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "SOA",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 608\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "SOA",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 20892\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "NS",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 25811\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "NS",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 28740\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "artefacts.digiconseil.fr",
+      "type": "A",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 37330\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "artefacts.digiconseil.fr",
+      "type": "A",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 52868\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "_acme-challenge.artefacts.digiconseil.fr",
+      "type": "TXT",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 24709\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "_acme-challenge.artefacts.digiconseil.fr",
+      "type": "TXT",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 25373\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "CAA",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 33396\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "ns2.sendinblue.com",
+      "name": "digiconseil.fr",
+      "type": "CAA",
+      "transport": "TCP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 19234\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232",
+      "error": ""
+    },
+    {
+      "server": "d.nic.fr",
+      "name": "digiconseil.fr",
+      "type": "NS",
+      "transport": "UDP",
+      "exit": 0,
+      "response": ";; Got answer:\n;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 20999\n;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 4, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 1232\n; COOKIE: ff6e0d8d5281b173010000006ac4f06b40861f6637e0fddd (good)\n;; AUTHORITY SECTION:\ndigiconseil.fr.\t\t3600\tIN\tNS\tns2.sendinblue.com.\ndigiconseil.fr.\t\t3600\tIN\tNS\tdns2.alwaysdata.com.\ndigiconseil.fr.\t\t3600\tIN\tNS\tns1.sendinblue.com.\ndigiconseil.fr.\t\t3600\tIN\tNS\tdns1.alwaysdata.com.",
+      "error": ""
+    }
+  ]
+}

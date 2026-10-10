@@ -1,0 +1,17 @@
+[
+  {
+    "host": "librechat.digiconseil.fr",
+    "noSessionRefreshHTTP": 200,
+    "cookieAttributesOnly": []
+  },
+  {
+    "host": "librechat-preprod.digiconseil.fr",
+    "noSessionRefreshHTTP": 200,
+    "cookieAttributesOnly": []
+  },
+  {
+    "source": "dc10 /app/api/server/services/AuthService.js",
+    "refreshTokenAndTokenProvider": "httpOnly, secure helper, sameSite strict; no Domain property (default host-only)",
+    "runtimeNoSessionTest": "No cookie emitted; not a real-member cookie capture"
+  }
+]

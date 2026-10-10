@@ -1,0 +1,42 @@
+name: librechat-artefacts
+services:
+  bundler:
+    image: librechat-club-artefacts@sha256:660a9372a17385993bebba9b91f7d407f5d2eb6d345557e8515c2890ed30e13c
+    pull_policy: never
+    container_name: librechat-artefacts
+    restart: unless-stopped
+    read_only: true
+    user: 101:101
+    cap_drop:
+    - ALL
+    security_opt:
+    - no-new-privileges:true
+    mem_limit: 256m
+    cpus: 0.5
+    pids_limit: 64
+    tmpfs:
+    - /tmp:size=32m,uid=101,gid=101,mode=1770
+    environment:
+      VIRTUAL_HOST: artefacts.digiconseil.fr,*.artefacts.digiconseil.fr
+      VIRTUAL_PORT: '8080'
+    networks:
+    - librechat-artefacts-net
+    healthcheck:
+      test:
+      - CMD
+      - wget
+      - -q
+      - --spider
+      - http://127.0.0.1:8080/healthz
+      interval: 30s
+      timeout: 3s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: '3'
+networks:
+  librechat-artefacts-net:
+    name: librechat-artefacts-net
+    internal: true

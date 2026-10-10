@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+# Container name is a non-secret setting inherited from the ACME job.
+: "${ARTEFACTS_NGINX_PROXY_CONTAINER:?Hermione must supply the existing proxy name}"
+/usr/bin/docker exec "$ARTEFACTS_NGINX_PROXY_CONTAINER" nginx -t >/dev/null 2>&1
+/usr/bin/docker exec "$ARTEFACTS_NGINX_PROXY_CONTAINER" nginx -s reload >/dev/null 2>&1

@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/acmesh-official/acme.sh",
+  "commit": "807da6498377ee5e0cf43a78091f46f12dc59a89",
+  "files": {
+    "acme.sh": "c7d68b021cfd6380ea83a82962abde5b484779fee0b97d38681dfa1396bbc8d7",
+    "dnsapi/dns_ad.sh": "44aa59e1429cb58be59a9ce15441b88db92f83c8a11438fe1b21880c91d52313"
+  },
+  "accountSelector": "Percent-encode the complete Basic username: token + ' account=lightprod.net'; no native AD_Account option in dns_ad.",
+  "secret": {"project": "librechat-artefacts", "projectId": "73962094-cbd8-464f-91d6-bea7ba041d8c", "environment": "prod", "path": "/dns-hermione", "name": "ALWAYSDATA_API_TOKEN"}
+}

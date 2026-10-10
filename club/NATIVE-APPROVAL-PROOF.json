@@ -1,0 +1,124 @@
+[
+  {
+    "container": "librechat",
+    "nativePolicy": true,
+    "toolImplementationInvoked": false,
+    "decisions": [
+      {
+        "tool": "bash_tool",
+        "decision": "allow"
+      },
+      {
+        "tool": "read_file",
+        "decision": "allow"
+      },
+      {
+        "tool": "create_file",
+        "decision": "allow"
+      },
+      {
+        "tool": "edit_file",
+        "decision": "allow"
+      },
+      {
+        "tool": "dolibarr_action_mcp_gw_dolibarr",
+        "decision": "ask"
+      },
+      {
+        "tool": "create_event_mcp_gw_google_calendar",
+        "decision": "ask"
+      },
+      {
+        "tool": "update_event_mcp_gw_google_calendar",
+        "decision": "ask"
+      },
+      {
+        "tool": "cancel_event_mcp_gw_google_calendar",
+        "decision": "ask"
+      },
+      {
+        "tool": "stripe_api_write_mcp_gw_stripe",
+        "decision": "ask"
+      },
+      {
+        "tool": "send_stripe_feedback_mcp_gw_stripe",
+        "decision": "ask"
+      },
+      {
+        "tool": "manage_stripe_accounts_mcp_gw_stripe",
+        "decision": "ask"
+      },
+      {
+        "tool": "stripe_analytics_mcp_gw_stripe",
+        "decision": "ask"
+      },
+      {
+        "tool": "stripe_implementation_planner_mcp_gw_stripe",
+        "decision": "ask"
+      },
+      {
+        "tool": "mail_send_mcp_gw_mail",
+        "decision": "ask"
+      },
+      {
+        "tool": "mail_delete_mcp_gw_mail",
+        "decision": "ask"
+      },
+      {
+        "tool": "listmonk_add_subscriber_mcp_gw_listmonk",
+        "decision": "ask"
+      },
+      {
+        "tool": "listmonk_create_campaign_mcp_gw_listmonk",
+        "decision": "ask"
+      },
+      {
+        "tool": "listmonk_update_campaign_mcp_gw_listmonk",
+        "decision": "ask"
+      },
+      {
+        "tool": "listmonk_campaign_status_mcp_gw_listmonk",
+        "decision": "ask"
+      },
+      {
+        "tool": "listmonk_test_campaign_mcp_gw_listmonk",
+        "decision": "ask"
+      },
+      {
+        "tool": "acquisition_run_mcp_gw_acquisition",
+        "decision": "ask"
+      },
+      {
+        "tool": "synthetic_write_mcp_fixture",
+        "decision": "ask"
+      }
+    ]
+  },
+  {
+    "container": "librechat-preprod",
+    "nativePolicy": true,
+    "toolImplementationInvoked": false,
+    "decisions": [
+      {
+        "tool": "bash_tool",
+        "decision": "allow"
+      },
+      {
+        "tool": "read_file",
+        "decision": "allow"
+      },
+      {
+        "tool": "create_file",
+        "decision": "allow"
+      },
+      {
+        "tool": "edit_file",
+        "decision": "allow"
+      },
+      {
+        "tool": "synthetic_write_mcp_fixture",
+        "decision": "ask"
+      }
+    ]
+  }
+]

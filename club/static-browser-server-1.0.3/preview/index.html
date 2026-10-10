@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aperçu</title>
+
+    <style>
+      body {
+        display: flex;
+        margin: 10vw;
+      }
+
+      main {
+        margin: auto;
+        text-align: left;
+        max-width: 36em;
+      }
+
+      p {
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 1.45;
+        margin: 0;
+        color: #323232;
+      }
+
+      #preview-unavailable-brave {
+        margin-top: 0.75em;
+      }
+    </style>
+    <script src="/preview-unavailable-fallback.js" defer></script>
+  </head>
+  <body style="display: none">
+    <main id="preview-unavailable" hidden>
+      <p>
+        Aperçu indisponible : votre navigateur bloque une fonction nécessaire à
+        l'affichage. Téléchargez le fichier, ou ouvrez cette conversation dans
+        Chrome, Edge ou Firefox.
+      </p>
+      <p id="preview-unavailable-brave"></p>
+    </main>
+  </body>
+  <noscript>
+    <p>
+      Aperçu indisponible : votre navigateur bloque une fonction nécessaire à
+      l'affichage. Téléchargez le fichier, ou ouvrez cette conversation dans
+      Chrome, Edge ou Firefox.
+    </p>
+  </noscript>
+</html>
