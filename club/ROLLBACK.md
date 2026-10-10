@@ -30,3 +30,14 @@ La proposition OVH retire seulement `ns1.sendinblue.com` et `ns2.sendinblue.com`
 ## État après activation publique
 
 Le 6 octobre 2026, `activate-preview.py` a déployé les deux web avec `SANDPACK_BUNDLER_URL=https://artefacts.digiconseil.fr` et `SANDPACK_STATIC_BUNDLER_URL=https://preview.artefacts.digiconseil.fr`. Les deux sauvegardes `docker-compose.before-preview.yml` existent. Le retrait ciblé de ces deux seules variables, puis le redéploiement du seul web avec les commandes ci-dessus, est préférable si d’autres changements sont intervenus depuis la sauvegarde. Préserver les images, volumes, CodeAPI, rôles et fichiers membres. Aucun correctif LibreChat ajouté.
+
+## C103 — repli après retrait du correctif, 10 octobre 2026
+
+Sur décision de Maxime, le correctif `9c269c202` est revert sur main et le bundler
+Club revient à l’image `0d02712af98205df729801700e1419c6c20327263597c185036c2d02b82331ee`.
+L’image `660a9372a17385993bebba9b91f7d407f5d2eb6d345557e8515c2890ed30e13c`
+reste disponible localement pour repli et est référencée par `previousImage`
+dans `IMAGE.json`. Si nécessaire, changer uniquement l’image du service
+`bundler`, puis utiliser le portail avec `--service=bundler --no-deps` et
+contrôler horodatage, disponibilité et aperçus visibles Excel/Word. Ne restaurer
+aucun Compose complet, ne changer aucun web, secret, réseau ou service SVE.
